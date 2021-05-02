@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>calcraft.org/</loc>
+    <loc>/</loc>
     <lastmod>2021-04-24T21:37:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2021-04-24T21:37:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/categories/learning/</loc>
+    <loc>/categories/learning/</loc>
     <lastmod>2021-04-24T21:37:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2021-04-24T21:37:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/post/cn_2021-04-24-math-neq/</loc>
+    <loc>/post/cn_2021-04-24-math-neq/</loc>
     <lastmod>2021-04-24T21:37:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/categories/tutorial/</loc>
+    <loc>/categories/tutorial/</loc>
     <lastmod>2021-02-26T20:44:31+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</loc>
+    <loc>/post/cn_2021-02-26-wolfram-with-jekyll/</loc>
     <lastmod>2021-02-26T20:44:31+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/categories/calcraft/</loc>
+    <loc>/categories/calcraft/</loc>
     <lastmod>2021-02-15T21:35:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</loc>
+    <loc>/post/cn_2021-02-15-calcraft-tale-part-1/</loc>
     <lastmod>2021-02-15T21:35:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/categories/coding/</loc>
+    <loc>/categories/coding/</loc>
     <lastmod>2021-02-15T19:49:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/post/cn_2021-02-15-powerpy-development/</loc>
+    <loc>/post/cn_2021-02-15-powerpy-development/</loc>
     <lastmod>2021-02-15T19:49:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/categories/cool_things/</loc>
+    <loc>/categories/cool_things/</loc>
     <lastmod>2021-02-14T12:34:56+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</loc>
+    <loc>/post/cn_2021-02-14-blender-smoke-simulation/</loc>
     <lastmod>2021-02-14T12:34:56+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/categories/tesseract/</loc>
+    <loc>/categories/tesseract/</loc>
     <lastmod>2021-02-14T01:48:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/post/cn_2021-02-14-tesseract-ideas/</loc>
+    <loc>/post/cn_2021-02-14-tesseract-ideas/</loc>
     <lastmod>2021-02-14T01:48:00+00:00</lastmod>
   </url><url>
-    <loc>calcraft.org/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

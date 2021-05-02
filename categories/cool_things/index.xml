@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cool_things on Academy of Bored Ones</title>
-    <link>calcraft.org/categories/cool_things/</link>
+    <link>/categories/cool_things/</link>
     <description>Recent content in cool_things on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2021 FlifeX. 保留所有权利.</copyright>
-    <lastBuildDate>Sun, 14 Feb 2021 12:34:56 +0000</lastBuildDate><atom:link href="calcraft.org/categories/cool_things/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Feb 2021 12:34:56 +0000</lastBuildDate><atom:link href="/categories/cool_things/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
-      <link>calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
+      <link>/post/cn_2021-02-14-blender-smoke-simulation/</link>
       <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
       
-      <guid>calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
+      <guid>/post/cn_2021-02-14-blender-smoke-simulation/</guid>
       <description>引言 示例最终效果
 你需要安装 Blender (在此教程中，我的版本是 2.91.0)，如果你曾经使用过 Blender 就更好了。
 烟雾   创建一个默认的立方体。
