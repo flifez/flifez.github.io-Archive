@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coding on Academy of Bored Ones</title>
+    <link>/categories/coding/</link>
+    <description>Recent content in coding on Academy of Bored Ones</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2021 FlifeX. 保留所有权利.</copyright>
+    <lastBuildDate>Mon, 15 Feb 2021 19:49:00 +0000</lastBuildDate><atom:link href="/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerPy 开发日志</title>
+      <link>/post/cn_2021-02-15-powerpy-development/</link>
+      <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
+      
+      <guid>/post/cn_2021-02-15-powerpy-development/</guid>
+      <description>引言 PowerPy 是一个用 Python 写的 Shell，致力于达到与bash，zsh等 Linux Shell 相似的功能。
+目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 eval 函数。
+典型函数 PowerPy 的开发过程中，我也遇到过许多恶心的问题。下面是一些典型的函数。
+  def loop(self, username): PROMPT_PREFIX = username + &amp;#39; $ &amp;#39; while True: issue_command = &amp;#39;os.system(\&amp;#39;%s\&amp;#39;)&amp;#39; % input(PROMPT_PREFIX) eval(issue_command) 是的，你也许会认为：”就这？“，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 eval() 函数。
+  </description>
+    </item>
+    
+  </channel>
+</rss>
