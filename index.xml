@@ -1,0 +1,279 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academy of Bored Ones</title>
+    <link>/</link>
+    <description>Recent content on Academy of Bored Ones</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2021 FlifeX. 保留所有权利.</copyright>
+    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate>
+    
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>不等式及杂项</title>
+        <link>/post/cn_2021-04-24-math-neq/</link>
+        <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
+        
+        <guid>/post/cn_2021-04-24-math-neq/</guid>
+        <description>Academy of Bored Ones /post/cn_2021-04-24-math-neq/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+&lt;p&gt;这篇文章将介绍一些著名的不等式。&lt;/p&gt;
+&lt;h4 id=&#34;1-均值不等式&#34;&gt;1. 均值不等式&lt;/h4&gt;
+&lt;p&gt;这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了：
+$$
+\sqrt{ab}\leq\frac{a+b}{2}
+$$
+然而，均值不等式还有多元形式。
+$$
+\sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n}
+$$
+例如，
+$$
+\sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;2-琴生不等式&#34;&gt;2. 琴生不等式&lt;/h4&gt;
+&lt;p&gt;另一个著名的不等式。它的一个特例是
+$$
+\frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right).
+$$
+你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。
+$$
+\frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right)
+$$
+其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。&lt;/p&gt;
+- /post/cn_2021-04-24-math-neq/ - 2021 FlifeX. 保留所有权利.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>如何在 Jupyter 中使用 Wolfram Engine</title>
+        <link>/post/cn_2021-02-26-wolfram-with-jekyll/</link>
+        <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
+        
+        <guid>/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
+        <description>Academy of Bored Ones /post/cn_2021-02-26-wolfram-with-jekyll/ -&lt;ul&gt;
+&lt;li&gt;预计阅读时间：&lt;strong&gt;10分钟&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我发现我已经十天没更新这玩意了……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此教程将介绍一种在 Jupyter 中使用 Wolfram Engine 的方法，以便获得更高的数据处理效率。&lt;/p&gt;
+&lt;h3 id=&#34;安装-wolfram-engine&#34;&gt;安装 Wolfram Engine&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;你可以在&lt;a href=&#34;https://www.wolfram.com/engine/&#34;&gt;这里&lt;/a&gt;免费下载 Wolfram Engine。实际上它也能在附带的 WolframScript 中运行，不过我们的目标是将它植入为 Jupyter 的一个内核。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找一个教程，它应该会让你下载一个&lt;code&gt;.paclet&lt;/code&gt;文件来向 Wolfram Engine 添加支持 Jupyter 的特性。我无法提供这个文件，因为我忘了具体过程。你只要上网搜索 &amp;ldquo;Wolfram Engine + Jupyter&amp;rdquo; 就能看到许多完整教程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Jupyter Lab 或 Jupyter Notebook。你现在应该能选择 &amp;ldquo;Wolfram Language&amp;rdquo; 内核了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;联合-wolfram-语言和-python&#34;&gt;联合 Wolfram 语言和 Python&lt;/h3&gt;
+&lt;p&gt;举个例子。&lt;/p&gt;
+&lt;p&gt;Python 部分：（如果你使用 Anaconda 安装 Jupyter，所使用的包应该会自动安装）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;In[]:
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sympy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; sp
+
+defsym &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; sym: sp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Symbol(sym)
+x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; defsym(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;)
+testset &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([i&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;)])
+f &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+
+reslist &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; num &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; testset:
+  reslist&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(sp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;integrate(f, (x, num, num &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)))
+  
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(reslist)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;把 &lt;code&gt;reslist&lt;/code&gt; 复制进另一个有 Wolfram 内核的 Notebook：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mathematica&#34; data-lang=&#34;mathematica&#34;&gt;testlist &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {reslist} &lt;span style=&#34;color:#75715e&#34;&gt;(*We must ignore the []s here *)&lt;/span&gt;
+ListLinePlot[testlist]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们会得到一个显示了积分结果的图。这比 &lt;code&gt;matplotlib&lt;/code&gt; 包不知道快到哪里去了。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;FlifeX&lt;/em&gt;&lt;/p&gt;
+- /post/cn_2021-02-26-wolfram-with-jekyll/ - 2021 FlifeX. 保留所有权利.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Calcraft 的起源 (第一节)</title>
+        <link>/post/cn_2021-02-15-calcraft-tale-part-1/</link>
+        <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
+        
+        <guid>/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
+        <description>Academy of Bored Ones /post/cn_2021-02-15-calcraft-tale-part-1/ -&lt;h3 id=&#34;calcraft-的起源&#34;&gt;Calcraft 的起源&lt;/h3&gt;
+&lt;p&gt;什么是 Calcraft？它是个合成词 （&lt;strong&gt;Cal&lt;/strong&gt;culator + Mine&lt;strong&gt;craft&lt;/strong&gt;）。追溯 2019，Calcraft 的故事便会完全向我们展现。&lt;/p&gt;
+&lt;p&gt;在 &lt;strong&gt;2019 年 2 月&lt;/strong&gt;, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 历史上曾出现过的最伟大的游戏服务器。&lt;/p&gt;
+&lt;p&gt;实际上，我不想自吹自擂。但不幸的是，这确实是实话。现在（&lt;strong&gt;2021 年 2 月&lt;/strong&gt;），尽管两年已经过去，Calcraft 仍在展现它的无穷生命力。Calcraft —— 一个从未被完成的项目的副产物 —— 之所以拥有如此强大的生命力的缘由，甚至连它的创造者也不知道，但他也相信 Calcraft 会以它独特的方式走下去。也许它代表了一种意志力？我并不认为，但我们仍可以凝视它一步一步的成长下去。&lt;/p&gt;
+- /post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 FlifeX. 保留所有权利.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>PowerPy 开发日志</title>
+        <link>/post/cn_2021-02-15-powerpy-development/</link>
+        <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
+        
+        <guid>/post/cn_2021-02-15-powerpy-development/</guid>
+        <description>Academy of Bored Ones /post/cn_2021-02-15-powerpy-development/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;PowerPy&lt;/strong&gt; 是一个用 Python 写的 Shell，致力于达到与&lt;code&gt;bash&lt;/code&gt;，&lt;code&gt;zsh&lt;/code&gt;等 Linux Shell 相似的功能。&lt;/p&gt;
+&lt;p&gt;目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 &lt;code&gt;eval&lt;/code&gt; 函数。&lt;/p&gt;
+&lt;h3 id=&#34;典型函数&#34;&gt;典型函数&lt;/h3&gt;
+&lt;p&gt;PowerPy 的开发过程中，我也遇到过许多恶心的问题。下面是一些典型的函数。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;loop&lt;/span&gt;(self, username):
+    PROMPT_PREFIX &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; username &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; $ &amp;#39;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; True:
+        issue_command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;os.system(&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; input(PROMPT_PREFIX)
+        eval(issue_command)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;是的，你也许会认为：”就这？“，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 &lt;code&gt;eval()&lt;/code&gt; 函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+- /post/cn_2021-02-15-powerpy-development/ - 2021 FlifeX. 保留所有权利.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
+        <link>/post/cn_2021-02-14-blender-smoke-simulation/</link>
+        <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
+        
+        <guid>/post/cn_2021-02-14-blender-smoke-simulation/</guid>
+        <description>Academy of Bored Ones /post/cn_2021-02-14-blender-smoke-simulation/ -&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/14828e06d0c47839.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;示例最终效果&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;你需要安装 &lt;strong&gt;Blender&lt;/strong&gt; (在此教程中，我的版本是 &lt;strong&gt;2.91.0&lt;/strong&gt;)，如果你曾经使用过 Blender 就更好了。&lt;/p&gt;
+&lt;h3 id=&#34;烟雾&#34;&gt;烟雾&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建一个默认的立方体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后，对方块应用&lt;strong&gt;物体 - 快速效果 - 快速烟雾&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果一切顺利，你会看见一个由线框组成的立方体 (&lt;strong&gt;Smoke Domain&lt;/strong&gt;，烟雾域)，里面有另一个比较小的立方体。仔细观察，我们会发现另一个小正方体连在烟雾域的一个角上，其代表&lt;strong&gt;将要被烘培的烟雾的分辨率&lt;/strong&gt;（我们之后解释）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;strong&gt;烟雾域&lt;/strong&gt;的&lt;em&gt;物理属性&lt;/em&gt;选项卡里调整烟雾。这里，我提供一组推荐的参数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;细分精度：&lt;strong&gt;越高越好，这取决于你电脑的性能。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通常来说，300 到 500 就够了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用场景重力： &lt;em&gt;&lt;strong&gt;Z&lt;/strong&gt;&lt;/em&gt; 方向 = &lt;em&gt;&lt;strong&gt;g&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启用&lt;strong&gt;自适配域&lt;/strong&gt;（这可以减少烘培时间）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启用&lt;strong&gt;消融&lt;/strong&gt;，&lt;strong&gt;时间&lt;/strong&gt;设置为 30，并且启用&lt;strong&gt;减慢&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启用&lt;strong&gt;噪波&lt;/strong&gt;，把 &lt;strong&gt;Upres 系数&lt;/strong&gt; 设置为 2，&lt;strong&gt;强度/力度&lt;/strong&gt; 设置为 0.75，&lt;strong&gt;缩放&lt;/strong&gt; 设置为 2，并且把&lt;strong&gt;时间&lt;/strong&gt;设置为 0.1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改&lt;strong&gt;火焰&lt;/strong&gt;：把&lt;strong&gt;反应速度&lt;/strong&gt;设置为 0.75，&lt;strong&gt;涡量&lt;/strong&gt;设置为1，&lt;strong&gt;最高温度&lt;/strong&gt;设置为 4.5，&lt;strong&gt;最小值&lt;/strong&gt;设置为 1.5。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在，如果你做正确了，点击&lt;strong&gt;烘培&lt;/strong&gt;， 然后慢慢等吧！不久，你的屏幕上就会出现一团十分真实的烟雾。（提示：你可以把 Blender 窗口分为三个区域 —— 一个用作渲染视图，一个用作&lt;strong&gt;着色器编辑器&lt;/strong&gt;，另一个用作&lt;strong&gt;时间线&lt;/strong&gt;，并且你总是可以用&lt;strong&gt;相机视角&lt;/strong&gt;！）&lt;/p&gt;
+&lt;h3 id=&#34;着色器&#34;&gt;着色器&lt;/h3&gt;
+&lt;p&gt;在时间线里面选一帧好看的（每次烘培结果都不一样，因为这是一个混沌系统）。现在就是这个教程最激动人心的部分！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点击烟雾域，在着色器编辑器里创建这些东西：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;火焰&lt;/strong&gt;：属性  (&lt;strong&gt;flame&lt;/strong&gt;).系数 - 运算 (&lt;strong&gt;正片叠底(相乘 A*B)&lt;/strong&gt;) (另一个参数 &lt;strong&gt;150-250&lt;/strong&gt;) - 强度/力度.自发光 (&lt;strong&gt;颜色 H: 0.082, S: 0.700, V: 1.000&lt;/strong&gt;) - 相加着色器 (标记为 &lt;strong&gt;AS1&lt;/strong&gt;) - 材质输出 (体积 (音量))。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;（烟雾）密度&lt;/strong&gt;：属性 (&lt;strong&gt;density&lt;/strong&gt;).系数 - 颜色渐变 (&lt;strong&gt;DensityRamp&lt;/strong&gt;) - 运算 (&lt;strong&gt;相加&lt;/strong&gt;) (另一个参数 &lt;strong&gt;100&lt;/strong&gt;) - 密度.原理化体积 (&lt;strong&gt;Smoke Principled Volume&lt;/strong&gt;) - &lt;strong&gt;AS1&lt;/strong&gt; - 材质输出 (体积 (音量))。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;颜色&lt;/strong&gt;：马氏分形纹理 (- 矢量运算 (&lt;strong&gt;[EXP] Add Textures&lt;/strong&gt;)) - 系数.颜色渐变 - 颜色.&lt;strong&gt;Smoke Principled Volume&lt;/strong&gt; - &lt;strong&gt;AS1&lt;/strong&gt; - 材质输出 (体积 (音量))。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/655511c6d054d11c.png&#34; alt=&#34;node&#34;&gt;
+&lt;em&gt;示例节点配置&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;提示：如果你不知道怎么办，就按图示设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;渲染&#34;&gt;渲染&lt;/h3&gt;
+&lt;p&gt;这是这个教程的最终部分。点击&lt;em&gt;渲染属性&lt;/em&gt;选项卡，然后把&lt;strong&gt;渲染引擎&lt;/strong&gt;换成 &lt;em&gt;Cycles&lt;/em&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启用&lt;strong&gt;自适应采样&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;启用&lt;strong&gt;降噪&lt;/strong&gt;。使用 &lt;strong&gt;NLM&lt;/strong&gt; 渲染，并且把&lt;strong&gt;起始采样&lt;/strong&gt;设置为 3。&lt;/li&gt;
+&lt;li&gt;如果你使用 &lt;strong&gt;CPU&lt;/strong&gt; 渲染，把&lt;strong&gt;拼贴大小&lt;/strong&gt;设置为 &lt;strong&gt;16 * 16&lt;/strong&gt;。如果你使用 &lt;strong&gt;GPU&lt;/strong&gt;，把&lt;strong&gt;拼贴大小&lt;/strong&gt;设置为 &lt;strong&gt;256 * 256&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;现在就可以了！按下 &lt;strong&gt;F12&lt;/strong&gt; ，获得你自己的烟雾模拟图片吧！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面是一组可选设置。它们应该在渲染前完成。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点击&lt;em&gt;输出属性&lt;/em&gt;选项卡，把&lt;strong&gt;分辨率&lt;/strong&gt;设置成显示器的分辨率（或者其他什么）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把&lt;strong&gt;文件格式&lt;/strong&gt;设置成高质量的，比如 PNG。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;附录&#34;&gt;附录&lt;/h3&gt;
+&lt;p&gt;如果你不想自己做，我也提供一份 &lt;a href=&#34;129.211.80.104/smoke.blend&#34;&gt;.blend 文件&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;玩的开心！&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;FlifeX, MMXXXVIII&lt;/em&gt;&lt;/p&gt;
+- /post/cn_2021-02-14-blender-smoke-simulation/ - 2021 FlifeX. 保留所有权利.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Tesseract 想法 (2021)</title>
+        <link>/post/cn_2021-02-14-tesseract-ideas/</link>
+        <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
+        
+        <guid>/post/cn_2021-02-14-tesseract-ideas/</guid>
+        <description>Academy of Bored Ones /post/cn_2021-02-14-tesseract-ideas/ -&lt;h3 id=&#34;tesseract-长期计划&#34;&gt;Tesseract 长期计划&lt;/h3&gt;
+&lt;p&gt;最近更新：&lt;strong&gt;2021/02/14&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个人不应止步于眼前的世界。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Tesseract 是一个致力于拥有&lt;strong&gt;世界上最安全的聊天环境&lt;/strong&gt;的聊天软件。&lt;/p&gt;
+&lt;p&gt;目前，我拟定了如下目标：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;完全的 P2P 多人对话；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加密系统；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GUI（由于技术原因，我们决定使用 &lt;a href=&#34;https://github.com/spectresystems/spectre.console&#34;&gt;Spectre.Console&lt;/a&gt;）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;账户系统；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以及许多未提到的功能！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;!-- raw HTML omitted --&gt;Discord 服务器&lt;!-- raw HTML omitted --&gt; (因为我的 VPN 没法用了，现在我拿不到它的链接）。&lt;/p&gt;
+- /post/cn_2021-02-14-tesseract-ideas/ - 2021 FlifeX. 保留所有权利.</description>
+        </item>
+    
+    
+  </channel>
+</rss> 

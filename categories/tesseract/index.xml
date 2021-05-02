@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tesseract on Academy of Bored Ones</title>
+    <link>/categories/tesseract/</link>
+    <description>Recent content in tesseract on Academy of Bored Ones</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2021 FlifeX. 保留所有权利.</copyright>
+    <lastBuildDate>Sun, 14 Feb 2021 01:48:00 +0000</lastBuildDate><atom:link href="/categories/tesseract/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tesseract 想法 (2021)</title>
+      <link>/post/cn_2021-02-14-tesseract-ideas/</link>
+      <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
+      
+      <guid>/post/cn_2021-02-14-tesseract-ideas/</guid>
+      <description>Tesseract 长期计划 最近更新：2021/02/14
+ 一个人不应止步于眼前的世界。
+ Tesseract 是一个致力于拥有世界上最安全的聊天环境的聊天软件。
+目前，我拟定了如下目标：
+  完全的 P2P 多人对话；
+  加密系统；
+  GUI（由于技术原因，我们决定使用 Spectre.Console）；
+  账户系统；
+  以及许多未提到的功能！
+  因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 Trello 主页，GitHub 仓库，和 Discord 服务器(因为我的 VPN 没法用了，现在我拿不到它的链接）。</description>
+    </item>
+    
+  </channel>
+</rss>

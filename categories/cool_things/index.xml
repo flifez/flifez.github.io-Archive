@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cool_things on Academy of Bored Ones</title>
+    <link>/categories/cool_things/</link>
+    <description>Recent content in cool_things on Academy of Bored Ones</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2021 FlifeX. 保留所有权利.</copyright>
+    <lastBuildDate>Sun, 14 Feb 2021 12:34:56 +0000</lastBuildDate><atom:link href="/categories/cool_things/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
+      <link>/post/cn_2021-02-14-blender-smoke-simulation/</link>
+      <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
+      
+      <guid>/post/cn_2021-02-14-blender-smoke-simulation/</guid>
+      <description>引言 示例最终效果
+你需要安装 Blender (在此教程中，我的版本是 2.91.0)，如果你曾经使用过 Blender 就更好了。
+烟雾   创建一个默认的立方体。
+  然后，对方块应用物体 - 快速效果 - 快速烟雾。
+  如果一切顺利，你会看见一个由线框组成的立方体 (Smoke Domain，烟雾域)，里面有另一个比较小的立方体。仔细观察，我们会发现另一个小正方体连在烟雾域的一个角上，其代表将要被烘培的烟雾的分辨率（我们之后解释）。
+  在烟雾域的物理属性选项卡里调整烟雾。这里，我提供一组推荐的参数：
+  细分精度：越高越好，这取决于你电脑的性能。
+ 通常来说，300 到 500 就够了。    使用场景重力： Z 方向 = g.
+  启用自适配域（这可以减少烘培时间）。
+  启用消融，时间设置为 30，并且启用减慢。
+  启用噪波，把 Upres 系数 设置为 2，强度/力度 设置为 0.75，缩放 设置为 2，并且把时间设置为 0.1。
+  修改火焰：把反应速度设置为 0.75，涡量设置为1，最高温度设置为 4.5，最小值设置为 1.5。
+    现在，如果你做正确了，点击烘培， 然后慢慢等吧！不久，你的屏幕上就会出现一团十分真实的烟雾。（提示：你可以把 Blender 窗口分为三个区域 —— 一个用作渲染视图，一个用作着色器编辑器，另一个用作时间线，并且你总是可以用相机视角！）</description>
+    </item>
+    
+  </channel>
+</rss>
