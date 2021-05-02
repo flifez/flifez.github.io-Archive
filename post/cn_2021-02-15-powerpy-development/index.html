@@ -326,8 +326,6 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 </div>
             </div>
             
-            <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-            
             
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
@@ -385,6 +383,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 </a>
                 
             </nav>
+        
+            
             <div class="post-comment-wrapper">
                 
 
@@ -395,17 +395,18 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 
 
 
-        
+        <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+                <div id="vcomments"></div>
+                <script>
+                    new Valine({
+                        el: '#vcomments',
+                        avatar: 'robohash',
+                        appId: 'T29WEuKyGb7rg9h2l5J9dz68-gzGzoHsz',
+                        appKey: 'frvzT2QXnXWAHQE5uuTMyxG0'
+                    })
+                </script>
+                
             </div>
-            
-            <div id="vcomments", style="width: 650px; margin: 0 auto"></div>
-            <script>
-                new Valine({
-                    el: '#vcomments',
-                    appId: 'T29WEuKyGb7rg9h2l5J9dz68-gzGzoHsz',
-                    appKey: 'frvzT2QXnXWAHQE5uuTMyxG0'
-                })
-            </script>
         </div>
     </div>
 </div>
