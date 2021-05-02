@@ -338,6 +338,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 </a>
                 
             </nav>
+        
+            
             <div class="post-comment-wrapper">
                 
 
@@ -348,17 +350,17 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 
 
 
-        
+        <div id="vcomments"></div>
+                <script>
+                    new Valine({
+                        el: '#vcomments',
+                        appId: 'T29WEuKyGb7rg9h2l5J9dz68-gzGzoHsz',
+                        appKey: 'frvzT2QXnXWAHQE5uuTMyxG0'
+                    })
+                </script>
+                
             </div>
             
-            <div id="vcomments", style="width: 650px; margin: 0 auto"></div>
-            <script>
-                new Valine({
-                    el: '#vcomments',
-                    appId: 'T29WEuKyGb7rg9h2l5J9dz68-gzGzoHsz',
-                    appKey: 'frvzT2QXnXWAHQE5uuTMyxG0'
-                })
-            </script>
         </div>
     </div>
 </div>
