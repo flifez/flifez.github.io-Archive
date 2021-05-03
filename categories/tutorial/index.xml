@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tutorial on Academy of Bored Ones</title>
-    <link>http://calcraft.org/categories/tutorial/</link>
+    <link>https://calcraft.org/categories/tutorial/</link>
     <description>Recent content in tutorial on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2021 FlifeX. 保留所有权利.</copyright>
-    <lastBuildDate>Fri, 26 Feb 2021 20:44:31 +0000</lastBuildDate><atom:link href="http://calcraft.org/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Feb 2021 20:44:31 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何在 Jupyter 中使用 Wolfram Engine</title>
-      <link>http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
+      <link>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
       <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
       
-      <guid>http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
+      <guid>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
       <description>预计阅读时间：10分钟  引言  我发现我已经十天没更新这玩意了……
  此教程将介绍一种在 Jupyter 中使用 Wolfram Engine 的方法，以便获得更高的数据处理效率。
 安装 Wolfram Engine   你可以在这里免费下载 Wolfram Engine。实际上它也能在附带的 WolframScript 中运行，不过我们的目标是将它植入为 Jupyter 的一个内核。

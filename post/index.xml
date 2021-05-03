@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Academy of Bored Ones</title>
-    <link>http://calcraft.org/post/</link>
+    <link>https://calcraft.org/post/</link>
     <description>Recent content in Posts on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2021 FlifeX. 保留所有权利.</copyright>
-    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="http://calcraft.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>不等式及杂项</title>
-      <link>http://calcraft.org/post/cn_2021-04-24-math-neq/</link>
+      <link>https://calcraft.org/post/cn_2021-04-24-math-neq/</link>
       <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
       
-      <guid>http://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
+      <guid>https://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
       <description>引言 这篇文章将介绍一些著名的不等式。
 1. 均值不等式 这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了： $$ \sqrt{ab}\leq\frac{a+b}{2} $$ 然而，均值不等式还有多元形式。 $$ \sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n} $$ 例如， $$ \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5} $$
 2. 琴生不等式 另一个著名的不等式。它的一个特例是 $$ \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right). $$ 你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。 $$ \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right) $$ 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。</description>
@@ -21,10 +21,10 @@
     
     <item>
       <title>如何在 Jupyter 中使用 Wolfram Engine</title>
-      <link>http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
+      <link>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
       <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
       
-      <guid>http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
+      <guid>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
       <description>预计阅读时间：10分钟  引言  我发现我已经十天没更新这玩意了……
  此教程将介绍一种在 Jupyter 中使用 Wolfram Engine 的方法，以便获得更高的数据处理效率。
 安装 Wolfram Engine   你可以在这里免费下载 Wolfram Engine。实际上它也能在附带的 WolframScript 中运行，不过我们的目标是将它植入为 Jupyter 的一个内核。
@@ -37,10 +37,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>Calcraft 的起源 (第一节)</title>
-      <link>http://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
+      <link>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
       <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
       
-      <guid>http://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
+      <guid>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
       <description>Calcraft 的起源 什么是 Calcraft？它是个合成词 （Calculator + Minecraft）。追溯 2019，Calcraft 的故事便会完全向我们展现。
 在 2019 年 2 月, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 历史上曾出现过的最伟大的游戏服务器。
 实际上，我不想自吹自擂。但不幸的是，这确实是实话。现在（2021 年 2 月），尽管两年已经过去，Calcraft 仍在展现它的无穷生命力。Calcraft —— 一个从未被完成的项目的副产物 —— 之所以拥有如此强大的生命力的缘由，甚至连它的创造者也不知道，但他也相信 Calcraft 会以它独特的方式走下去。也许它代表了一种意志力？我并不认为，但我们仍可以凝视它一步一步的成长下去。</description>
@@ -48,10 +48,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>PowerPy 开发日志</title>
-      <link>http://calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
+      <link>https://calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
       <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
       
-      <guid>http://calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
+      <guid>https://calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
       <description>引言 PowerPy 是一个用 Python 写的 Shell，致力于达到与bash，zsh等 Linux Shell 相似的功能。
 目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 eval 函数。
 典型函数 PowerPy 的开发过程中，我也遇到过许多恶心的问题。下面是一些典型的函数。
@@ -61,10 +61,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
-      <link>http://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
+      <link>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
       <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
       
-      <guid>http://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
+      <guid>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
       <description>引言 示例最终效果
 你需要安装 Blender (在此教程中，我的版本是 2.91.0)，如果你曾经使用过 Blender 就更好了。
 烟雾   创建一个默认的立方体。
@@ -82,10 +82,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>Tesseract 想法 (2021)</title>
-      <link>http://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
+      <link>https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
       <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
       
-      <guid>http://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
+      <guid>https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
       <description>Tesseract 长期计划 最近更新：2021/02/14
  一个人不应止步于眼前的世界。
  Tesseract 是一个致力于拥有世界上最安全的聊天环境的聊天软件。
