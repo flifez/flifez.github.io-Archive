@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>learning on Academy of Bored Ones</title>
-    <link>https://calcraft.org/categories/learning/</link>
+    <link>/categories/learning/</link>
     <description>Recent content in learning on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2021 FlifeX. 保留所有权利.</copyright>
-    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="/categories/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>不等式及杂项</title>
-      <link>https://calcraft.org/post/cn_2021-04-24-math-neq/</link>
+      <link>/post/cn_2021-04-24-math-neq/</link>
       <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
+      <guid>/post/cn_2021-04-24-math-neq/</guid>
       <description>引言 这篇文章将介绍一些著名的不等式。
 1. 均值不等式 这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了： $$ \sqrt{ab}\leq\frac{a+b}{2} $$ 然而，均值不等式还有多元形式。 $$ \sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n} $$ 例如， $$ \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5} $$
 2. 琴生不等式 另一个著名的不等式。它的一个特例是 $$ \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right). $$ 你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。 $$ \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right) $$ 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。</description>

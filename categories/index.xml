@@ -2,63 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Academy of Bored Ones</title>
-    <link>https://calcraft.org/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2021 FlifeX. 保留所有权利.</copyright>
-    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>learning</title>
-      <link>https://calcraft.org/categories/learning/</link>
+      <link>/categories/learning/</link>
       <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/categories/learning/</guid>
+      <guid>/categories/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>https://calcraft.org/categories/tutorial/</link>
+      <link>/categories/tutorial/</link>
       <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
       
-      <guid>https://calcraft.org/categories/tutorial/</guid>
+      <guid>/categories/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>calcraft</title>
-      <link>https://calcraft.org/categories/calcraft/</link>
+      <link>/categories/calcraft/</link>
       <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/categories/calcraft/</guid>
+      <guid>/categories/calcraft/</guid>
       <description></description>
     </item>
     
     <item>
       <title>coding</title>
-      <link>https://calcraft.org/categories/coding/</link>
+      <link>/categories/coding/</link>
       <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/categories/coding/</guid>
+      <guid>/categories/coding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cool_things</title>
-      <link>https://calcraft.org/categories/cool_things/</link>
+      <link>/categories/cool_things/</link>
       <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
       
-      <guid>https://calcraft.org/categories/cool_things/</guid>
+      <guid>/categories/cool_things/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tesseract</title>
-      <link>https://calcraft.org/categories/tesseract/</link>
+      <link>/categories/tesseract/</link>
       <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/categories/tesseract/</guid>
+      <guid>/categories/tesseract/</guid>
       <description></description>
     </item>
     
