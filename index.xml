@@ -153,7 +153,7 @@ ListLinePlot[testlist]
         <guid>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
         <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ -&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://calcraft.org/images/blender_mantaflow/example_render_output.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/14828e06d0c47839.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;示例最终效果&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;你需要安装 &lt;strong&gt;Blender&lt;/strong&gt; (在此教程中，我的版本是 &lt;strong&gt;2.91.0&lt;/strong&gt;)，如果你曾经使用过 Blender 就更好了。&lt;/p&gt;
 &lt;h3 id=&#34;烟雾&#34;&gt;烟雾&lt;/h3&gt;
@@ -209,7 +209,7 @@ ListLinePlot[testlist]
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;颜色&lt;/strong&gt;：马氏分形纹理 (- 矢量运算 (&lt;strong&gt;[EXP] Add Textures&lt;/strong&gt;)) - 系数.颜色渐变 - 颜色.&lt;strong&gt;Smoke Principled Volume&lt;/strong&gt; - &lt;strong&gt;AS1&lt;/strong&gt; - 材质输出 (体积 (音量))。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://calcraft.org/images/blender_mantaflow/node_configuration.png&#34; alt=&#34;node&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/655511c6d054d11c.png&#34; alt=&#34;node&#34;&gt;
 &lt;em&gt;示例节点配置&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
