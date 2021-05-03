@@ -112,6 +112,8 @@ ListLinePlot[testlist]
 &lt;p&gt;什么是 Calcraft？它是个合成词 （&lt;strong&gt;Cal&lt;/strong&gt;culator + Mine&lt;strong&gt;craft&lt;/strong&gt;）。追溯 2019，Calcraft 的故事便会完全向我们展现。&lt;/p&gt;
 &lt;p&gt;在 &lt;strong&gt;2019 年 2 月&lt;/strong&gt;, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 历史上曾出现过的最伟大的游戏服务器。&lt;/p&gt;
 &lt;p&gt;实际上，我不想自吹自擂。但不幸的是，这确实是实话。现在（&lt;strong&gt;2021 年 2 月&lt;/strong&gt;），尽管两年已经过去，Calcraft 仍在展现它的无穷生命力。Calcraft —— 一个从未被完成的项目的副产物 —— 之所以拥有如此强大的生命力的缘由，甚至连它的创造者也不知道，但他也相信 Calcraft 会以它独特的方式走下去。也许它代表了一种意志力？我并不认为，但我们仍可以凝视它一步一步的成长下去。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;FlifeX&lt;/strong&gt;：我的傻逼文笔不适合写这东西，以后看&lt;a href=&#34;https://shimo.im/docs/hYpxvWJDkYtYHy9d/&#34;&gt;这里&lt;/a&gt;吧。&lt;/p&gt;
 - https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 FlifeX. 保留所有权利.</description>
         </item>
     
@@ -151,7 +153,7 @@ ListLinePlot[testlist]
         <guid>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
         <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ -&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/14828e06d0c47839.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://calcraft.org/images/blender_mantaflow/example_render_output.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;示例最终效果&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;你需要安装 &lt;strong&gt;Blender&lt;/strong&gt; (在此教程中，我的版本是 &lt;strong&gt;2.91.0&lt;/strong&gt;)，如果你曾经使用过 Blender 就更好了。&lt;/p&gt;
 &lt;h3 id=&#34;烟雾&#34;&gt;烟雾&lt;/h3&gt;
@@ -207,7 +209,7 @@ ListLinePlot[testlist]
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;颜色&lt;/strong&gt;：马氏分形纹理 (- 矢量运算 (&lt;strong&gt;[EXP] Add Textures&lt;/strong&gt;)) - 系数.颜色渐变 - 颜色.&lt;strong&gt;Smoke Principled Volume&lt;/strong&gt; - &lt;strong&gt;AS1&lt;/strong&gt; - 材质输出 (体积 (音量))。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/655511c6d054d11c.png&#34; alt=&#34;node&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://calcraft.org/images/blender_mantaflow/node_configuration.png&#34; alt=&#34;node&#34;&gt;
 &lt;em&gt;示例节点配置&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
