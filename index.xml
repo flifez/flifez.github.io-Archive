@@ -5,7 +5,7 @@
     <description>Recent content on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2021 FlifeX. 此博客采取 CC BY-NC-SA 4.0 协议授权.</copyright>
+    <copyright>2021 Academy of Bored Ones. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
     <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate>
     
         <atom:link href="https://calcraft.org/index.xml" rel="self" type="application/rss+xml" />
@@ -43,7 +43,7 @@ $$
 \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right)
 $$
 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-04-24-math-neq/ - 2021 FlifeX. 此博客采取 CC BY-NC-SA 4.0 协议授权.</description>
+- https://calcraft.org/post/cn_2021-04-24-math-neq/ - 2021 Academy of Bored Ones. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
     
@@ -97,7 +97,7 @@ reslist &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
 ListLinePlot[testlist]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们会得到一个显示了积分结果的图。这比 &lt;code&gt;matplotlib&lt;/code&gt; 包不知道快到哪里去了。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;FlifeX&lt;/em&gt;&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ - 2021 FlifeX. 此博客采取 CC BY-NC-SA 4.0 协议授权.</description>
+- https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ - 2021 Academy of Bored Ones. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
     
@@ -114,7 +114,7 @@ ListLinePlot[testlist]
 &lt;p&gt;实际上，我不想自吹自擂。但不幸的是，这确实是实话。现在（&lt;strong&gt;2021 年 2 月&lt;/strong&gt;），尽管两年已经过去，Calcraft 仍在展现它的无穷生命力。Calcraft —— 一个从未被完成的项目的副产物 —— 之所以拥有如此强大的生命力的缘由，甚至连它的创造者也不知道，但他也相信 Calcraft 会以它独特的方式走下去。也许它代表了一种意志力？我并不认为，但我们仍可以凝视它一步一步的成长下去。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;FlifeX&lt;/strong&gt;：我的傻逼文笔不适合写这东西，以后看&lt;a href=&#34;https://shimo.im/docs/hYpxvWJDkYtYHy9d/&#34;&gt;这里&lt;/a&gt;吧。&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 FlifeX. 此博客采取 CC BY-NC-SA 4.0 协议授权.</description>
+- https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 Academy of Bored Ones. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
     
@@ -140,7 +140,7 @@ ListLinePlot[testlist]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;是的，你也许会认为：”就这？“，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 &lt;code&gt;eval()&lt;/code&gt; 函数。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-- https://calcraft.org/post/cn_2021-02-15-powerpy-development/ - 2021 FlifeX. 此博客采取 CC BY-NC-SA 4.0 协议授权.</description>
+- https://calcraft.org/post/cn_2021-02-15-powerpy-development/ - 2021 Academy of Bored Ones. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
     
@@ -237,7 +237,7 @@ ListLinePlot[testlist]
 &lt;p&gt;如果你不想自己做，我也提供一份 &lt;a href=&#34;129.211.80.104/smoke.blend&#34;&gt;.blend 文件&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;玩的开心！&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;FlifeX, MMXXXVIII&lt;/em&gt;&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ - 2021 FlifeX. 此博客采取 CC BY-NC-SA 4.0 协议授权.</description>
+- https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ - 2021 Academy of Bored Ones. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
     
@@ -273,7 +273,7 @@ ListLinePlot[testlist]
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;!-- raw HTML omitted --&gt;Discord 服务器&lt;!-- raw HTML omitted --&gt; (因为我的 VPN 没法用了，现在我拿不到它的链接）。&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 FlifeX. 此博客采取 CC BY-NC-SA 4.0 协议授权.</description>
+- https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 Academy of Bored Ones. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
     
