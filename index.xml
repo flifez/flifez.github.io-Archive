@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Academy of Bored Ones</title>
-    <link>/</link>
+    <link>http://calcraft.org/</link>
     <description>Recent content on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2021 FlifeX. 保留所有权利.</copyright>
     <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate>
     
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://calcraft.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>不等式及杂项</title>
-        <link>/post/cn_2021-04-24-math-neq/</link>
+        <link>http://calcraft.org/post/cn_2021-04-24-math-neq/</link>
         <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
         
-        <guid>/post/cn_2021-04-24-math-neq/</guid>
-        <description>Academy of Bored Ones /post/cn_2021-04-24-math-neq/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+        <guid>http://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
+        <description>Academy of Bored Ones http://calcraft.org/post/cn_2021-04-24-math-neq/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;p&gt;这篇文章将介绍一些著名的不等式。&lt;/p&gt;
 &lt;h4 id=&#34;1-均值不等式&#34;&gt;1. 均值不等式&lt;/h4&gt;
 &lt;p&gt;这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了：
@@ -43,18 +43,18 @@ $$
 \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right)
 $$
 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。&lt;/p&gt;
-- /post/cn_2021-04-24-math-neq/ - 2021 FlifeX. 保留所有权利.</description>
+- http://calcraft.org/post/cn_2021-04-24-math-neq/ - 2021 FlifeX. 保留所有权利.</description>
         </item>
     
     
     
         <item>
         <title>如何在 Jupyter 中使用 Wolfram Engine</title>
-        <link>/post/cn_2021-02-26-wolfram-with-jekyll/</link>
+        <link>http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
         <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
         
-        <guid>/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
-        <description>Academy of Bored Ones /post/cn_2021-02-26-wolfram-with-jekyll/ -&lt;ul&gt;
+        <guid>http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
+        <description>Academy of Bored Ones http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ -&lt;ul&gt;
 &lt;li&gt;预计阅读时间：&lt;strong&gt;10分钟&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -97,33 +97,33 @@ reslist &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
 ListLinePlot[testlist]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们会得到一个显示了积分结果的图。这比 &lt;code&gt;matplotlib&lt;/code&gt; 包不知道快到哪里去了。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;FlifeX&lt;/em&gt;&lt;/p&gt;
-- /post/cn_2021-02-26-wolfram-with-jekyll/ - 2021 FlifeX. 保留所有权利.</description>
+- http://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ - 2021 FlifeX. 保留所有权利.</description>
         </item>
     
     
     
         <item>
         <title>Calcraft 的起源 (第一节)</title>
-        <link>/post/cn_2021-02-15-calcraft-tale-part-1/</link>
+        <link>http://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
         <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
         
-        <guid>/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
-        <description>Academy of Bored Ones /post/cn_2021-02-15-calcraft-tale-part-1/ -&lt;h3 id=&#34;calcraft-的起源&#34;&gt;Calcraft 的起源&lt;/h3&gt;
+        <guid>http://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
+        <description>Academy of Bored Ones http://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ -&lt;h3 id=&#34;calcraft-的起源&#34;&gt;Calcraft 的起源&lt;/h3&gt;
 &lt;p&gt;什么是 Calcraft？它是个合成词 （&lt;strong&gt;Cal&lt;/strong&gt;culator + Mine&lt;strong&gt;craft&lt;/strong&gt;）。追溯 2019，Calcraft 的故事便会完全向我们展现。&lt;/p&gt;
 &lt;p&gt;在 &lt;strong&gt;2019 年 2 月&lt;/strong&gt;, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 历史上曾出现过的最伟大的游戏服务器。&lt;/p&gt;
 &lt;p&gt;实际上，我不想自吹自擂。但不幸的是，这确实是实话。现在（&lt;strong&gt;2021 年 2 月&lt;/strong&gt;），尽管两年已经过去，Calcraft 仍在展现它的无穷生命力。Calcraft —— 一个从未被完成的项目的副产物 —— 之所以拥有如此强大的生命力的缘由，甚至连它的创造者也不知道，但他也相信 Calcraft 会以它独特的方式走下去。也许它代表了一种意志力？我并不认为，但我们仍可以凝视它一步一步的成长下去。&lt;/p&gt;
-- /post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 FlifeX. 保留所有权利.</description>
+- http://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 FlifeX. 保留所有权利.</description>
         </item>
     
     
     
         <item>
         <title>PowerPy 开发日志</title>
-        <link>/post/cn_2021-02-15-powerpy-development/</link>
+        <link>http://calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
         <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
         
-        <guid>/post/cn_2021-02-15-powerpy-development/</guid>
-        <description>Academy of Bored Ones /post/cn_2021-02-15-powerpy-development/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+        <guid>http://calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
+        <description>Academy of Bored Ones http://calcraft.org/post/cn_2021-02-15-powerpy-development/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;PowerPy&lt;/strong&gt; 是一个用 Python 写的 Shell，致力于达到与&lt;code&gt;bash&lt;/code&gt;，&lt;code&gt;zsh&lt;/code&gt;等 Linux Shell 相似的功能。&lt;/p&gt;
 &lt;p&gt;目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 &lt;code&gt;eval&lt;/code&gt; 函数。&lt;/p&gt;
 &lt;h3 id=&#34;典型函数&#34;&gt;典型函数&lt;/h3&gt;
@@ -138,18 +138,18 @@ ListLinePlot[testlist]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;是的，你也许会认为：”就这？“，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 &lt;code&gt;eval()&lt;/code&gt; 函数。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-- /post/cn_2021-02-15-powerpy-development/ - 2021 FlifeX. 保留所有权利.</description>
+- http://calcraft.org/post/cn_2021-02-15-powerpy-development/ - 2021 FlifeX. 保留所有权利.</description>
         </item>
     
     
     
         <item>
         <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
-        <link>/post/cn_2021-02-14-blender-smoke-simulation/</link>
+        <link>http://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
         <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
         
-        <guid>/post/cn_2021-02-14-blender-smoke-simulation/</guid>
-        <description>Academy of Bored Ones /post/cn_2021-02-14-blender-smoke-simulation/ -&lt;!-- raw HTML omitted --&gt;
+        <guid>http://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
+        <description>Academy of Bored Ones http://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ -&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/14828e06d0c47839.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;示例最终效果&lt;/em&gt;&lt;/p&gt;
@@ -235,18 +235,18 @@ ListLinePlot[testlist]
 &lt;p&gt;如果你不想自己做，我也提供一份 &lt;a href=&#34;129.211.80.104/smoke.blend&#34;&gt;.blend 文件&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;玩的开心！&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;FlifeX, MMXXXVIII&lt;/em&gt;&lt;/p&gt;
-- /post/cn_2021-02-14-blender-smoke-simulation/ - 2021 FlifeX. 保留所有权利.</description>
+- http://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ - 2021 FlifeX. 保留所有权利.</description>
         </item>
     
     
     
         <item>
         <title>Tesseract 想法 (2021)</title>
-        <link>/post/cn_2021-02-14-tesseract-ideas/</link>
+        <link>http://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
         <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
         
-        <guid>/post/cn_2021-02-14-tesseract-ideas/</guid>
-        <description>Academy of Bored Ones /post/cn_2021-02-14-tesseract-ideas/ -&lt;h3 id=&#34;tesseract-长期计划&#34;&gt;Tesseract 长期计划&lt;/h3&gt;
+        <guid>http://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
+        <description>Academy of Bored Ones http://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ -&lt;h3 id=&#34;tesseract-长期计划&#34;&gt;Tesseract 长期计划&lt;/h3&gt;
 &lt;p&gt;最近更新：&lt;strong&gt;2021/02/14&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一个人不应止步于眼前的世界。&lt;/p&gt;
@@ -271,7 +271,7 @@ ListLinePlot[testlist]
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;!-- raw HTML omitted --&gt;Discord 服务器&lt;!-- raw HTML omitted --&gt; (因为我的 VPN 没法用了，现在我拿不到它的链接）。&lt;/p&gt;
-- /post/cn_2021-02-14-tesseract-ideas/ - 2021 FlifeX. 保留所有权利.</description>
+- http://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 FlifeX. 保留所有权利.</description>
         </item>
     
     

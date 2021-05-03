@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Academy of Bored Ones</title>
-    <link>/tags/</link>
+    <link>http://calcraft.org/tags/</link>
     <description>Recent content in Tags on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2021 FlifeX. 保留所有权利.</copyright><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2021 FlifeX. 保留所有权利.</copyright><atom:link href="http://calcraft.org/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
