@@ -36,11 +36,11 @@
 
 
 
-<link rel="stylesheet" href="https://calcraft.org/scss/journal.min.04d8f2448bd21337269e46cbe3a527581aaf4da391352a0707d942da656163c6.css" integrity="sha256-BNjyRIvSEzcmnkbL46UnWBqvTaORNSoHB9lC2mVhY8Y=" media="screen">
+<link rel="stylesheet" href="https://calcraft.org/scss/journal.min.1610e64b7c666ab308c1d2f22fc73f713df3728fef442239fa8e65a9b84038aa.css" integrity="sha256-FhDmS3xmarMIwdLyL8c/cT3zco/vRCI5&#43;o5lqbhAOKo=" media="screen">
 
 
 
-<link rel="stylesheet" href="https://calcraft.org/scss/dark-mode.min.e1983fa6b08c137cb70a082401e9e4044ab177fd42d75aa684fe97aa65e73563.css" integrity="sha256-4Zg/prCME3y3CggkAenkBEqxd/1C11qmhP6XqmXnNWM=" media="screen">
+<link rel="stylesheet" href="https://calcraft.org/scss/dark-mode.min.2bec1a0315acaaf6031befc942005f0e57ee8adf0502f367da3f8a8662e472ef.css" integrity="sha256-K&#43;waAxWsqvYDG&#43;/JQgBfDlfuit8FAvNn2j&#43;KhmLkcu8=" media="screen">
 
 
 <script src="/js/loadCSS.js"></script>
@@ -114,6 +114,16 @@
             
             
             
+            <a class="a-block nav-link-item false" href="/about">
+                关于
+            </a>
+            
+        
+            
+            
+            
+            
+            
             <a class="a-block nav-link-item false" href="/index.xml">
                 RSS
             </a>
@@ -132,7 +142,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 
 &copy;
 	
-	2021 AcBO. 本站遵循 CC BY-NC-SA 4.0 协议.
+	2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.
 	
 
     </div>
@@ -208,8 +218,26 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 						
 						
 							<li>
-								<a href="#2-%e7%90%b4%e7%94%9f%e4%b8%8d%e7%ad%89%e5%bc%8f" onclick="onNavClick(`#2-琴生不等式-nav`)" id="2-琴生不等式-nav">
-									2. 琴生不等式
+								<a href="#2-%e7%90%b4%e7%94%9f-jensen-%e4%b8%8d%e7%ad%89%e5%bc%8f" onclick="onNavClick(`#2-琴生-jensen-不等式-nav`)" id="2-琴生-jensen-不等式-nav">
+									2. 琴生 (Jensen) 不等式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-%e8%b5%ab%e5%b0%94%e5%be%b7-h%c3%b6lder-%e4%b8%8d%e7%ad%89%e5%bc%8f" onclick="onNavClick(`#3-赫尔德-hölder-不等式-nav`)" id="3-赫尔德-hölder-不等式-nav">
+									3. 赫尔德 (Hölder) 不等式
 								</a>
 							</li>
 						
@@ -267,6 +295,16 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 
                 <a class="a-block drawer-menu-item false" href="/categories">
                     分类
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    关于
                 </a>
                 
             
@@ -349,8 +387,26 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 						
 						
 							<li>
-								<a href="#2-%e7%90%b4%e7%94%9f%e4%b8%8d%e7%ad%89%e5%bc%8f" onclick="onNavClick(`#2-琴生不等式-nav`)" id="2-琴生不等式-nav">
-									2. 琴生不等式
+								<a href="#2-%e7%90%b4%e7%94%9f-jensen-%e4%b8%8d%e7%ad%89%e5%bc%8f" onclick="onNavClick(`#2-琴生-jensen-不等式-nav`)" id="2-琴生-jensen-不等式-nav">
+									2. 琴生 (Jensen) 不等式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#3-%e8%b5%ab%e5%b0%94%e5%be%b7-h%c3%b6lder-%e4%b8%8d%e7%ad%89%e5%bc%8f" onclick="onNavClick(`#3-赫尔德-hölder-不等式-nav`)" id="3-赫尔德-hölder-不等式-nav">
+									3. 赫尔德 (Hölder) 不等式
 								</a>
 							</li>
 						
@@ -457,7 +513,9 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 <div class="post-body" v-pre>
                 
                     <h3 id="引言">引言</h3>
+<blockquote>
 <p>这篇文章将介绍一些著名的不等式。</p>
+</blockquote>
 <h4 id="1-均值不等式">1. 均值不等式</h4>
 <p>这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了：
 $$
@@ -471,7 +529,7 @@ $$
 $$
 \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5}
 $$</p>
-<h4 id="2-琴生不等式">2. 琴生不等式</h4>
+<h4 id="2-琴生-jensen-不等式">2. 琴生 (Jensen) 不等式</h4>
 <p>另一个著名的不等式。它的一个特例是
 $$
 \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right).
@@ -481,6 +539,23 @@ $$
 \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right)
 $$
 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。</p>
+<h5 id="21-加权琴生不等式">2.1 加权琴生不等式</h5>
+<p>如同我们耳熟能详的加权平均数，加权琴生不等式可以这样表示：
+$$
+w_i\cdot \sum_{i=1}^nf(x_i)\leq f\left(\sum_{i=1}^nw_ix_i\right),\sum_{i=1}^nw_i=1
+$$
+容易发现，加权琴生不等式实际上就是在每一项之前乘上了权重 $w_i$。值得注意的是，这里并没有除以项数 $n$。</p>
+<h4 id="3-赫尔德-hölder-不等式">3. 赫尔德 (Hölder) 不等式</h4>
+<p>赫尔德不等式被戏称为大柯西不等式。先来看看它究竟长啥样。
+$$
+\sum_{i=1}^na_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}}\left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}},p&gt;1,\frac{1}{p}+\frac{1}{q}=1,\forall a_i,b_i\in\left(\R\cap[0,+\infty)\right)
+$$
+再来看看它的积分形式。
+$$
+\int_\Omega f(x)g(x)\mathrm{d}x\leq\left(\int_\Omega |f(x)|^p\mathrm{d}x\right)^{\frac{1}{p}}\left(\int_\Omega |g(x)|^q\mathrm{d}x\right)^{\frac{1}{q}}
+$$
+看起来不太友好，对吧？</p>
+<p>（未完待续）</p>
 
                     
                     <HR width="100%" id="EOF">
@@ -533,7 +608,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 
 &copy;
 	
-	2021 AcBO. 本站遵循 CC BY-NC-SA 4.0 协议.
+	2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.
 	
 </div>
             </div>

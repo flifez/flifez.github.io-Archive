@@ -6,7 +6,7 @@
     <description>Recent content in learning on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2021 AcBO. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
+    <copyright>2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
     <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>不等式及杂项</title>
@@ -14,9 +14,12 @@
       <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
       
       <guid>https://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
-      <description>引言 这篇文章将介绍一些著名的不等式。
-1. 均值不等式 这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了： $$ \sqrt{ab}\leq\frac{a+b}{2} $$ 然而，均值不等式还有多元形式。 $$ \sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n} $$ 例如， $$ \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5} $$
-2. 琴生不等式 另一个著名的不等式。它的一个特例是 $$ \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right). $$ 你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。 $$ \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right) $$ 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。</description>
+      <description>引言  这篇文章将介绍一些著名的不等式。
+ 1. 均值不等式 这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了： $$ \sqrt{ab}\leq\frac{a+b}{2} $$ 然而，均值不等式还有多元形式。 $$ \sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n} $$ 例如， $$ \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5} $$
+2. 琴生 (Jensen) 不等式 另一个著名的不等式。它的一个特例是 $$ \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right). $$ 你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。 $$ \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right) $$ 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。
+2.1 加权琴生不等式 如同我们耳熟能详的加权平均数，加权琴生不等式可以这样表示： $$ w_i\cdot \sum_{i=1}^nf(x_i)\leq f\left(\sum_{i=1}^nw_ix_i\right),\sum_{i=1}^nw_i=1 $$ 容易发现，加权琴生不等式实际上就是在每一项之前乘上了权重 $w_i$。值得注意的是，这里并没有除以项数 $n$。
+3. 赫尔德 (Hölder) 不等式 赫尔德不等式被戏称为大柯西不等式。先来看看它究竟长啥样。 $$ \sum_{i=1}^na_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}}\left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}},p&amp;gt;1,\frac{1}{p}+\frac{1}{q}=1,\forall a_i,b_i\in\left(\R\cap[0,+\infty)\right) $$ 再来看看它的积分形式。 $$ \int_\Omega f(x)g(x)\mathrm{d}x\leq\left(\int_\Omega |f(x)|^p\mathrm{d}x\right)^{\frac{1}{p}}\left(\int_\Omega |g(x)|^q\mathrm{d}x\right)^{\frac{1}{q}} $$ 看起来不太友好，对吧？
+（未完待续）</description>
     </item>
     
   </channel>
