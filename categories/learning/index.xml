@@ -7,7 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
-    <lastBuildDate>Sat, 24 Apr 2021 21:37:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Jun 2021 22:05:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 光线追踪：初步</title>
+      <link>https://calcraft.org/post/cn_2021-06-06-python-raytrace/</link>
+      <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
+      
+      <guid>https://calcraft.org/post/cn_2021-06-06-python-raytrace/</guid>
+      <description>引言  本文需要一些关于向量、线性代数和微积分学的知识。
+ 时至今日，计算机图形学 (Computer Graphics, CG) 已经进入了生活的方方面面。这里不探讨 CG 技术对我们带来的影响，仅从它的基础出发，用 Python （你没看错，我没用 C++）来进行图形学的简要探讨。
+本文所要实现的目标，是极为简单的一个模型：一个点光源位于平面的正上方，求它发出的光（不考虑衰减——这涉及到光传播中的平方反比定律）在该平面上各点的光强。这里请注意：即使是我们所提到的平面，也平行于我们所见到的屏幕。这样，在这篇文章中，我们就可以减少坐标变换与映射的出现，也更好让初次接触 CG 的读者快速理解。（你肯定不想一上来就算一堆矩阵是吧？）
+本文中所有渲染示意图均用 Blender 制作。
+图形学 Hello World：光 这个又臭又长的小标题很好地说明了我们将要处理什么，以及它在整个图形学学习中的地位。先来介绍一些概念。
+    图 1：光线的反射  定义 1.	如图 1，$A$ 是任何一段光滑曲线。则，过 $A$ 上一点作它的切线 $t$ (tangent)，再过交点 $N$ 作 $t$ 的垂线 $n$，我们把直线 $n$ 叫做曲线 $A$ 在点 $N$ 处的法线 (normal)。
+ 再次看图 1。这一次我们注意打在曲线 $A$ 上的那条线。如果这里把它看作光线，并把曲线 $A$ 看作镜面，那么它叫做入射光 (incident ray)。自然，有入射光必定有反射光 (reflected ray)，它和入射光关于法线 $n$ 轴对称。图中的角 $\theta$ 叫做入射角 (incident angle)，由上文我们可知反射角 (reflected ray) 在数值上等于入射角。</description>
+    </item>
+    
     <item>
       <title>不等式及杂项</title>
       <link>https://calcraft.org/post/cn_2021-04-24-math-neq/</link>

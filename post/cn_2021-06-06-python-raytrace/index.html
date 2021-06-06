@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Posts</title>
+<title>Python 光线追踪：初步</title>
 
 
 
@@ -51,11 +51,17 @@
 
 
 
+  
+    <script src="/js/toc-collapse.js"></script>
+  
 
 
 
 
 
+
+
+<script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
 
 
 
@@ -144,6 +150,84 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- 目录 -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e5%bc%95%e8%a8%80" onclick="onNavClick(`#引言-nav`)" id="引言-nav">
+									引言
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%bd%a2%e5%ad%a6-hello-world%e5%85%89" onclick="onNavClick(`#图形学-hello-world光-nav`)" id="图形学-hello-world光-nav">
+									图形学 Hello World：光
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%b9%e8%a7%92%e4%b8%8e%e6%98%8e%e6%9a%97" onclick="onNavClick(`#夹角与明暗-nav`)" id="夹角与明暗-nav">
+									夹角与明暗
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -159,8 +243,6 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 brightness_7
             </i>
         </a>
-        
-        
         
         
     </div>
@@ -215,6 +297,84 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 
             
             
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- 目录 -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+								<ul class="collapse" data-toggle="collapse">
+							
+						
+						
+							<li>
+								<a href="#%e5%bc%95%e8%a8%80" onclick="onNavClick(`#引言-nav`)" id="引言-nav">
+									引言
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%9b%be%e5%bd%a2%e5%ad%a6-hello-world%e5%85%89" onclick="onNavClick(`#图形学-hello-world光-nav`)" id="图形学-hello-world光-nav">
+									图形学 Hello World：光
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%a4%b9%e8%a7%92%e4%b8%8e%e6%98%8e%e6%9a%97" onclick="onNavClick(`#夹角与明暗-nav`)" id="夹角与明暗-nav">
+									夹角与明暗
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
         </div>
     </div>
 </div>
@@ -258,182 +418,130 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Python 光线追踪：初步
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-06-05 22:05
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/learning">learning</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  renderMathInElement(document.body, {
+                          delimiters: [
+                              {left: "$$", right: "$$", display: true},
+                              {left: "$", right: "$", display: false}
+                          ]
+                      });
+                });
+            </script>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h3 id="引言">引言</h3>
+<blockquote>
+<p>本文需要一些关于向量、线性代数和微积分学的知识。</p>
+</blockquote>
+<p>时至今日，计算机图形学 (Computer Graphics, CG) 已经进入了生活的方方面面。这里不探讨 CG 技术对我们带来的影响，仅从它的基础出发，用 <code>Python</code> （你没看错，我没用  <code>C++</code>）来进行图形学的简要探讨。</p>
+<p>本文所要实现的目标，是极为简单的一个模型：一个<strong>点光源</strong>位于<strong>平面</strong>的正上方，求它发出的光（不考虑衰减——这涉及到光传播中的<strong>平方反比定律</strong>）在该平面上各点的光强。这里请注意：即使是我们所提到的平面，也平行于我们所见到的屏幕。这样，在这篇文章中，我们就可以减少坐标变换与映射的出现，也更好让初次接触 CG 的读者快速理解。（你肯定不想一上来就算一堆矩阵是吧？）</p>
+<p>本文中所有渲染示意图均用 Blender 制作。</p>
+<h3 id="图形学-hello-world光">图形学 Hello World：光</h3>
+<p>这个又臭又长的小标题很好地说明了我们将要处理什么，以及它在整个图形学学习中的地位。先来介绍一些概念。</p>
+<center>
+  <pr><img src="https://z3.ax1x.com/2021/06/06/2azVv6.png" alt="2azVv6.png" border="0" style="zoom: 75%" /></a>  </center>
+<center> <b>图 1</b>：光线的反射 </center>
+<p><strong>定义 1.</strong>	如<strong>图 1</strong>，$A$ 是任何一段光滑曲线。则，过 $A$ 上一点作它的切线 $t$ (tangent)，再过交点 $N$ 作 $t$ 的垂线 $n$，我们把直线 $n$ 叫做曲线 $A$ 在点 $N$ 处的<strong>法线</strong> (normal)。</p>
+<hr>
+<p>再次看<strong>图 1</strong>。这一次我们注意打在曲线 $A$ 上的那条线。如果这里把它看作光线，并把曲线 $A$ 看作镜面，那么它叫做<strong>入射光</strong> (incident ray)。自然，有入射光必定有<strong>反射光</strong> (reflected ray)，它和入射光关于法线 $n$ 轴对称。图中的角 $\theta$ 叫做<strong>入射角</strong> (incident angle)，由上文我们可知<strong>反射角</strong> (reflected ray) 在数值上等于入射角。</p>
+<p>你可能已经感到疑惑：凭这些角，如何来刻画这束光照亮物体的程度呢？我们先暂时不看这幅图，接下来，我将一一介绍，光究竟如何照亮屏幕中的世界。</p>
+<h3 id="夹角与明暗">夹角与明暗</h3>
+<blockquote>
+<p>— “夹角”和“明暗”有半毛钱关系？</p>
+<p>— 还真有。</p>
+</blockquote>
+<p>这里重申一下引言里的条件：不考虑光的衰减。现在，如果让你来刻画光线和平面夹角和平面上光所射中这一点的光照强度，你将如何进行？请先思考，然后点击下面的折叠内容。</p>
+<details> <summary>一种解答</summary> <pre>
+生活经验告诉我们，光在<b>垂直照射</b>某一样东西的时候，它将最亮。
+（请不要想象手电筒或探照灯的光束——我们只是在谈论一丝光线，它没有体积。）
+如果光线与物体的夹角是0度，则物体将不被照亮。（想想这是为什么！）
+从<b>0度到90度</b>，从<b>漆黑到明亮</b>。你想到了哪个<b>三角函数</b>？
+我们谈论的便是<b>余弦函数</b>。因此，计算出光和平面的夹角余弦，便可以知道该点的明暗。
+</pre> </details>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2021-06-05</p>
+                    
+                </div>
+            </div>
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			下回<br>已经到头啦。
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://calcraft.org/post/cn_2021-04-24-math-neq/">
+			上回<br>不等式及杂项
+                </a>
+                
+            </nav>
         
-            <a class="a-block">
-                <div class="post-item-wrapper post-item-wrapper-no-hover">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title post-item-title-small year">
-                                2021
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
             
-            <a href="/post/cn_2021-06-06-python-raytrace/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Python 光线追踪：初步
-                            </div>
-                            <div class="post-item-meta">
-    2021-06-05
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <div class="post-comment-wrapper">
+                
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-04-24-math-neq/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                不等式及杂项
-                            </div>
-                            <div class="post-item-meta">
-    2021-04-24
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-26-wolfram-with-jekyll/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                如何在 Jupyter 中使用 Wolfram Engine
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-26
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-15-calcraft-tale-part-1/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Calcraft 的起源 (第一节)
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-15
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-15-powerpy-development/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                PowerPy 开发日志
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-15
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+<div id="vcomments"></div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-14-blender-smoke-simulation/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                如何在 Blender 2.9 中用 MantaFlow 模拟烟雾
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-14
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-14-tesseract-ideas/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Tesseract 想法 (2021)
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-14
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
+
+
+
         
+
+            </div>
+        </div>
     </div>
 </div>
 
-
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -536,6 +644,16 @@ app = new Vue({
         this.handleResize();
         this.mounted = true;
 
+        
+            new Valine({
+                el: '#vcomments',
+                appId: "T29WEuKyGb7rg9h2l5J9dz68-gzGzoHsz",
+                appKey: "frvzT2QXnXWAHQE5uuTMyxG0",
+                requiredFields: ['nick','mail'],
+                avatar: 'retro',
+                enableQQ: true,
+                recordIP: true,
+            })
         
         
     },
