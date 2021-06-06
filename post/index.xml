@@ -28,7 +28,7 @@
       <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
       
       <guid>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
-      <description>预计阅读时间：10分钟  引言  我发现我已经十天没更新这玩意了……
+      <description>预计阅读时间：10分钟   引言  我发现我已经十天没更新这玩意了……
  此教程将介绍一种在 Jupyter 中使用 Wolfram Engine 的方法，以便获得更高的数据处理效率。
 安装 Wolfram Engine   你可以在这里免费下载 Wolfram Engine。实际上它也能在附带的 WolframScript 中运行，不过我们的目标是将它植入为 Jupyter 的一个内核。
   找一个教程，它应该会让你下载一个.paclet文件来向 Wolfram Engine 添加支持 Jupyter 的特性。我无法提供这个文件，因为我忘了具体过程。你只要上网搜索 &amp;ldquo;Wolfram Engine + Jupyter&amp;rdquo; 就能看到许多完整教程。
@@ -99,7 +99,7 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
   GUI（由于技术原因，我们决定使用 Spectre.Console）；
   账户系统；
   以及许多未提到的功能！
-  因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 Trello 主页，GitHub 仓库，和 Discord 服务器(因为我的 VPN 没法用了，现在我拿不到它的链接）。</description>
+  因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 Trello 主页，GitHub 仓库，和 Discord 服务器 (因为我的 VPN 没法用了，现在我拿不到它的链接）。</description>
     </item>
     
   </channel>

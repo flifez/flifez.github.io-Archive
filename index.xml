@@ -76,7 +76,8 @@ $$
         <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ -&lt;ul&gt;
 &lt;li&gt;预计阅读时间：&lt;strong&gt;10分钟&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 
+src=&#34;//music.163.com/outchain/player?type=2&amp;id=574928897&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
 &lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我发现我已经十天没更新这玩意了……&lt;/p&gt;
@@ -170,7 +171,7 @@ ListLinePlot[testlist]
         <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
         
         <guid>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ -&lt;!-- raw HTML omitted --&gt;
+        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ -&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=1354201856&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
 &lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/14828e06d0c47839.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;示例最终效果&lt;/em&gt;&lt;/p&gt;
@@ -291,7 +292,7 @@ ListLinePlot[testlist]
 &lt;p&gt;以及许多未提到的功能！&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;!-- raw HTML omitted --&gt;Discord 服务器&lt;!-- raw HTML omitted --&gt; (因为我的 VPN 没法用了，现在我拿不到它的链接）。&lt;/p&gt;
+&lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;u&gt;Discord 服务器&lt;/u&gt; (因为我的 VPN 没法用了，现在我拿不到它的链接）。&lt;/p&gt;
 - https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
