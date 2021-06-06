@@ -19,7 +19,9 @@
         
         <guid>https://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
         <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-04-24-math-neq/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+&lt;blockquote&gt;
 &lt;p&gt;这篇文章将介绍一些著名的不等式。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;1-均值不等式&#34;&gt;1. 均值不等式&lt;/h4&gt;
 &lt;p&gt;这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了：
 $$
@@ -33,7 +35,7 @@ $$
 $$
 \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5}
 $$&lt;/p&gt;
-&lt;h4 id=&#34;2-琴生不等式&#34;&gt;2. 琴生不等式&lt;/h4&gt;
+&lt;h4 id=&#34;2-琴生-jensen-不等式&#34;&gt;2. 琴生 (Jensen) 不等式&lt;/h4&gt;
 &lt;p&gt;另一个著名的不等式。它的一个特例是
 $$
 \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right).
@@ -43,6 +45,23 @@ $$
 \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right)
 $$
 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。&lt;/p&gt;
+&lt;h5 id=&#34;21-加权琴生不等式&#34;&gt;2.1 加权琴生不等式&lt;/h5&gt;
+&lt;p&gt;如同我们耳熟能详的加权平均数，加权琴生不等式可以这样表示：
+$$
+w_i\cdot \sum_{i=1}^nf(x_i)\leq f\left(\sum_{i=1}^nw_ix_i\right),\sum_{i=1}^nw_i=1
+$$
+容易发现，加权琴生不等式实际上就是在每一项之前乘上了权重 $w_i$。值得注意的是，这里并没有除以项数 $n$。&lt;/p&gt;
+&lt;h4 id=&#34;3-赫尔德-hölder-不等式&#34;&gt;3. 赫尔德 (Hölder) 不等式&lt;/h4&gt;
+&lt;p&gt;赫尔德不等式被戏称为大柯西不等式。先来看看它究竟长啥样。
+$$
+\sum_{i=1}^na_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}}\left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}},p&amp;gt;1,\frac{1}{p}+\frac{1}{q}=1,\forall a_i,b_i\in\left(\R\cap[0,+\infty)\right)
+$$
+再来看看它的积分形式。
+$$
+\int_\Omega f(x)g(x)\mathrm{d}x\leq\left(\int_\Omega |f(x)|^p\mathrm{d}x\right)^{\frac{1}{p}}\left(\int_\Omega |g(x)|^q\mathrm{d}x\right)^{\frac{1}{q}}
+$$
+看起来不太友好，对吧？&lt;/p&gt;
+&lt;p&gt;（未完待续）&lt;/p&gt;
 - https://calcraft.org/post/cn_2021-04-24-math-neq/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
@@ -275,6 +294,10 @@ ListLinePlot[testlist]
 &lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;!-- raw HTML omitted --&gt;Discord 服务器&lt;!-- raw HTML omitted --&gt; (因为我的 VPN 没法用了，现在我拿不到它的链接）。&lt;/p&gt;
 - https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
+    
+    
+    
+    
     
     
   </channel>

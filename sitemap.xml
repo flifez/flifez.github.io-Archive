@@ -3,19 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://calcraft.org/</loc>
-    <lastmod>2021-05-03T11:03:00+00:00</lastmod>
+    <lastmod>2021-05-22T20:52:00+00:00</lastmod>
   </url><url>
     <loc>https://calcraft.org/categories/</loc>
-    <lastmod>2021-05-03T11:03:00+00:00</lastmod>
+    <lastmod>2021-05-22T20:52:00+00:00</lastmod>
   </url><url>
     <loc>https://calcraft.org/categories/learning/</loc>
-    <lastmod>2021-04-24T21:37:00+00:00</lastmod>
+    <lastmod>2021-05-22T20:52:00+00:00</lastmod>
   </url><url>
     <loc>https://calcraft.org/post/</loc>
-    <lastmod>2021-05-03T11:03:00+00:00</lastmod>
+    <lastmod>2021-05-22T20:52:00+00:00</lastmod>
   </url><url>
     <loc>https://calcraft.org/post/cn_2021-04-24-math-neq/</loc>
-    <lastmod>2021-04-24T21:37:00+00:00</lastmod>
+    <lastmod>2021-05-22T20:52:00+00:00</lastmod>
   </url><url>
     <loc>https://calcraft.org/categories/tutorial/</loc>
     <lastmod>2021-02-26T20:44:31+00:00</lastmod>
@@ -47,6 +47,10 @@
     <loc>https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</loc>
     <lastmod>2021-02-14T01:48:00+00:00</lastmod>
   </url><url>
+    <loc>https://calcraft.org/dump/</loc>
+  </url><url>
     <loc>https://calcraft.org/tags/</loc>
+  </url><url>
+    <loc>https://calcraft.org/about/</loc>
   </url>
 </urlset>
