@@ -60,9 +60,8 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
       <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
       
       <guid>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
-      <description>Calcraft 的起源 什么是 Calcraft？它是个合成词 （Calculator + Minecraft）。追溯 2019，Calcraft 的故事便会完全向我们展现。
-在 2019 年 2 月, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 历史上曾出现过的最伟大的游戏服务器。
-实际上，我不想自吹自擂。但不幸的是，这确实是实话。现在（2021 年 2 月），尽管两年已经过去，Calcraft 仍在展现它的无穷生命力。Calcraft —— 一个从未被完成的项目的副产物 —— 之所以拥有如此强大的生命力的缘由，甚至连它的创造者也不知道，但他也相信 Calcraft 会以它独特的方式走下去。也许它代表了一种意志力？我并不认为，但我们仍可以凝视它一步一步的成长下去。
+      <description>Calcraft 的起源 什么是 Calcraft？它是个合成词 （Calculator + Minecraft）。
+在 2019 年 2 月, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 有史以来最伟大的游戏服务器。
  FlifeX：我的傻逼文笔不适合写这东西，以后看这里吧。</description>
     </item>
     
@@ -75,7 +74,7 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
       <description>引言 PowerPy 是一个用 Python 写的 Shell，致力于达到与bash，zsh等 Linux Shell 相似的功能。
 目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 eval 函数。
 典型函数 PowerPy 的开发过程中，我也遇到过许多恶心的问题。下面是一些典型的函数。
-  def loop(self, username): PROMPT_PREFIX = username + &amp;#39; $ &amp;#39; while True: issue_command = &amp;#39;os.system(\&amp;#39;%s\&amp;#39;)&amp;#39; % input(PROMPT_PREFIX) eval(issue_command) 是的，你也许会认为：”就这？“，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 eval() 函数。
+  def loop(self, username): PROMPT_PREFIX = username + &amp;#39; $ &amp;#39; while True: issue_command = &amp;#39;os.system(\&amp;#39;%s\&amp;#39;)&amp;#39; % input(PROMPT_PREFIX) eval(issue_command) 是的，你也许会认为：“就这？”，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 eval() 函数。
   </description>
     </item>
     
@@ -115,7 +114,7 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
   GUI（由于技术原因，我们决定使用 Spectre.Console）；
   账户系统；
   以及许多未提到的功能！
-  因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 Trello 主页，GitHub 仓库，和 Discord 服务器 (因为我的 VPN 没法用了，现在我拿不到它的链接）。</description>
+  因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 Trello 主页，GitHub 仓库，和 Discord 服务器。</description>
     </item>
     
   </channel>

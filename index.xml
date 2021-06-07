@@ -270,9 +270,8 @@ ListLinePlot[testlist]
         
         <guid>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
         <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ -&lt;h3 id=&#34;calcraft-的起源&#34;&gt;Calcraft 的起源&lt;/h3&gt;
-&lt;p&gt;什么是 Calcraft？它是个合成词 （&lt;strong&gt;Cal&lt;/strong&gt;culator + Mine&lt;strong&gt;craft&lt;/strong&gt;）。追溯 2019，Calcraft 的故事便会完全向我们展现。&lt;/p&gt;
-&lt;p&gt;在 &lt;strong&gt;2019 年 2 月&lt;/strong&gt;, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 历史上曾出现过的最伟大的游戏服务器。&lt;/p&gt;
-&lt;p&gt;实际上，我不想自吹自擂。但不幸的是，这确实是实话。现在（&lt;strong&gt;2021 年 2 月&lt;/strong&gt;），尽管两年已经过去，Calcraft 仍在展现它的无穷生命力。Calcraft —— 一个从未被完成的项目的副产物 —— 之所以拥有如此强大的生命力的缘由，甚至连它的创造者也不知道，但他也相信 Calcraft 会以它独特的方式走下去。也许它代表了一种意志力？我并不认为，但我们仍可以凝视它一步一步的成长下去。&lt;/p&gt;
+&lt;p&gt;什么是 Calcraft？它是个合成词 （&lt;strong&gt;Cal&lt;/strong&gt;culator + Mine&lt;strong&gt;craft&lt;/strong&gt;）。&lt;/p&gt;
+&lt;p&gt;在 &lt;strong&gt;2019 年 2 月&lt;/strong&gt;, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 有史以来最伟大的游戏服务器。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;FlifeX&lt;/strong&gt;：我的傻逼文笔不适合写这东西，以后看&lt;a href=&#34;https://shimo.im/docs/hYpxvWJDkYtYHy9d/&#34;&gt;这里&lt;/a&gt;吧。&lt;/p&gt;
 - https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
@@ -298,7 +297,7 @@ ListLinePlot[testlist]
     &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; True:
         issue_command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;os.system(&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; input(PROMPT_PREFIX)
         eval(issue_command)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;是的，你也许会认为：”就这？“，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 &lt;code&gt;eval()&lt;/code&gt; 函数。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;是的，你也许会认为：“就这？”，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 &lt;code&gt;eval()&lt;/code&gt; 函数。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 - https://calcraft.org/post/cn_2021-02-15-powerpy-development/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
@@ -433,7 +432,7 @@ ListLinePlot[testlist]
 &lt;p&gt;以及许多未提到的功能！&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;u&gt;Discord 服务器&lt;/u&gt; (因为我的 VPN 没法用了，现在我拿不到它的链接）。&lt;/p&gt;
+&lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;u&gt;Discord 服务器&lt;/u&gt;。&lt;/p&gt;
 - https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
