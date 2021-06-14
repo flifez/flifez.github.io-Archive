@@ -19,124 +19,82 @@
         
         <guid>https://calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
         <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-06-06-raytracing-101/ -&lt;h2 id=&#34;1-引言&#34;&gt;1. 引言&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;本文需要一些关于向量的知识。&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;时至今日，计算机图形学 (Computer Graphics, CG) 已经进入了生活的方方面面。这里不探讨 CG 技术对生活带来的影响，仅从它的基础出发，用 &lt;code&gt;Python&lt;/code&gt; （没用到  &lt;code&gt;C++&lt;/code&gt;）来进行图形学的简要探讨。&lt;/p&gt;
-
 &lt;p&gt;本文所要实现的目标，是模拟极为简单的一个模型：一个&lt;strong&gt;点光源&lt;/strong&gt;位于&lt;strong&gt;平面&lt;/strong&gt;的正上方，求它发出的光（不考虑衰减——这涉及到光传播中的&lt;strong&gt;平方反比定律&lt;/strong&gt;）在该平面上各点的光强。&lt;/p&gt;
-
 &lt;p&gt;请注意：上文所提到的平面平行于电脑屏幕。这样，在这篇文章中，我们就可以减少坐标变换与映射的出现，也更好让初次接触 CG 的读者快速理解。&lt;/p&gt;
-
 &lt;p&gt;本文是系列文章的第一篇。作者本人也在同步学习。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;本文中所有渲染示意图均用 Blender 制作。&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;2-图形学-hello-world光&#34;&gt;2. 图形学 Hello World：光&lt;/h2&gt;
-
 &lt;p&gt;这个小标题很好地说明了我们将要处理什么，以及它在整个图形学学习中的地位。先来介绍一些概念。&lt;/p&gt;
-
 &lt;h3 id=&#34;21-光的反射&#34;&gt;2.1. 光的反射&lt;/h3&gt;
-
-&lt;p&gt;&lt;center&gt;
-  &lt;pr&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dEoAP.png&#34; alt=&#34;2dEoAP.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/a&gt;  &lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt; &lt;b&gt;图 1&lt;/b&gt;：光线的反射 &lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;定义 1.&lt;/strong&gt;   如&lt;strong&gt;图 1&lt;/strong&gt;，$A$ 是任意一段光滑曲线。则，过 $A$ 上一点作它的切线 $t$ (tangent)，再过交点 $N$ 作 $t$ 的垂线 $n$，我们把直线 $n$ 叫做曲线 $A$ 在点 $N$ 处的&lt;strong&gt;法线&lt;/strong&gt; (normal)。&lt;/p&gt;
-
+&lt;center&gt;
+  &lt;pr&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dEoAP.png&#34; alt=&#34;2dEoAP.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;center&gt; &lt;b&gt;图 1&lt;/b&gt;：光线的反射 &lt;/center&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.&lt;/strong&gt;	如&lt;strong&gt;图 1&lt;/strong&gt;，$A$ 是任意一段光滑曲线。则，过 $A$ 上一点作它的切线 $t$ (tangent)，再过交点 $N$ 作 $t$ 的垂线 $n$，我们把直线 $n$ 叫做曲线 $A$ 在点 $N$ 处的&lt;strong&gt;法线&lt;/strong&gt; (normal)。&lt;/p&gt;
 &lt;hr&gt;
-
 &lt;p&gt;再次看&lt;strong&gt;图 1&lt;/strong&gt;。这一次我们注意打在曲线 $A$ 上的那条线。如果这里把它看作光线，并把曲线 $A$ 看作镜面，那么它叫做&lt;strong&gt;入射光&lt;/strong&gt; (incident ray)。自然，有入射光必定有&lt;strong&gt;反射光&lt;/strong&gt; (reflected ray)，它和入射光关于法线 $n$ 轴对称。图中的角 $\theta$ 叫做&lt;strong&gt;入射角&lt;/strong&gt; (incident angle)，由上文我们可知&lt;strong&gt;反射角&lt;/strong&gt; (reflected angle) 在数值上等于入射角。&lt;/p&gt;
-
 &lt;p&gt;你可能已经感到疑惑：凭这些角，如何来刻画这束光照亮物体的程度呢？先暂时不看这幅图，接下来本文将一一介绍，光究竟如何照亮屏幕中的世界。&lt;/p&gt;
-
 &lt;h4 id=&#34;211-夹角与明暗&#34;&gt;2.1.1. 夹角与明暗&lt;/h4&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;— “夹角”和“明暗”有什么关系？&lt;/p&gt;
-
 &lt;p&gt;— 还真有。&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;这里重申一下引言里的条件：不考虑光的衰减。现在，如果让你来刻画光线和平面夹角和平面上光所射中这一点的光照强度之间的关系，你会怎么做？请先思考，然后查看下面的折叠内容。&lt;/p&gt;
-
-&lt;p&gt;&lt;details&gt; &lt;summary&gt;一种解答&lt;/summary&gt; &lt;pre&gt;
+&lt;details&gt; &lt;summary&gt;一种解答&lt;/summary&gt; &lt;pre&gt;
 生活经验告诉我们，光在&lt;b&gt;垂直照射&lt;/b&gt;某一样东西的时候，它将最亮。
 （请不要想象手电筒或探照灯的光束——我们只是在谈论一丝光线，它没有体积。）
 如果光线与物体的夹角是0度，则物体将不被照亮。
 从&lt;b&gt;0度到90度&lt;/b&gt;，从&lt;b&gt;漆黑到明亮&lt;/b&gt;。你想到了哪个&lt;b&gt;三角函数&lt;/b&gt;？
 正是&lt;b&gt;余弦函数&lt;/b&gt;。因此，计算出光和平面法向量的夹角余弦，便可以知道该点的明暗。
-&lt;/pre&gt; &lt;/details&gt;&lt;/p&gt;
-
+&lt;/pre&gt; &lt;/details&gt;
 &lt;h3 id=&#34;22-向量光线与平面&#34;&gt;2.2. 向量、光线与平面&lt;/h3&gt;
-
 &lt;p&gt;让我们顺着&lt;strong&gt;2.1.1&lt;/strong&gt;中的思路，继续探究这个问题。&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
   &lt;img src=&#34;https://z3.ax1x.com/2021/06/06/2dEgpD.png&#34; alt=&#34;2dEgpD.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt; &lt;b&gt;图 2&lt;/b&gt;：点光源与平面 &lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
+&lt;center&gt; &lt;b&gt;图 2&lt;/b&gt;：点光源与平面 &lt;/center&gt;
 &lt;p&gt;如图，在空间中，我们可以把从点光源 $L$ 发出的光线看作向量，并将它们反向，平移到光线与平面的接触点处，再计算平面上这一点的垂线所在的向量（我们把它叫做&lt;strong&gt;法向量&lt;/strong&gt;）与这束光的夹角的余弦。&lt;/p&gt;
-
 &lt;p&gt;你也许会注意到“接触点”一词。不过，这里完全可以选定一个点来计算，因为向量平移后仍等于原向量，这就是我们可以把所有向量平移到坐标原点简化运算的基础。&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;为什么不计算光线与平面的夹角？&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;因为它们都是向量，所以可以考虑向量&lt;strong&gt;点积&lt;/strong&gt; (dot product)。一般来说，
-&lt;span  class=&#34;math&#34;&gt;\(
+$$
 \mathbf{a}\cdot\mathbf{b}=|\mathbf{a}||\mathbf{b}|\cos\langle\mathbf{a}, \mathbf{b}\rangle
-\)&lt;/span&gt;
+$$
 这给了我们启示：两个向量之间的夹角，可以用它们的点积进行表达。但是，应该如何获取点积的值呢？下面，就引入用坐标表示点积的方法。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;定理.&lt;/strong&gt; 设 $\mathbf{a}=(x_1, y_1, z_1)$，$\mathbf{b}=(x_2, y_2, z_2)$，则它们的点积 $\mathbf{a}\cdot\mathbf{b}$：
-&lt;span  class=&#34;math&#34;&gt;\(
+&lt;p&gt;&lt;strong&gt;定理.&lt;/strong&gt;	设 $\mathbf{a}=(x_1, y_1, z_1)$，$\mathbf{b}=(x_2, y_2, z_2)$，则它们的点积 $\mathbf{a}\cdot\mathbf{b}$：
+$$
 \mathbf{a}\cdot\mathbf{b}=x_1x_2+y_1y_2+z_1z_2
-\)&lt;/span&gt;
+$$
 像这样，便可以由光线的坐标，得出光线和平面法向量之间的夹角的余弦值了。&lt;/p&gt;
-
 &lt;p&gt;此时会出现一个问题：从点光源 $L$ 发出的光线是无穷多的。如果要每一束光线都涉及到，那么积分就必不可少。&lt;/p&gt;
-
 &lt;p&gt;但是，如果现在想象一张格点纸，只考虑击中在&lt;strong&gt;格点上&lt;/strong&gt;的光线，并且只考虑&lt;strong&gt;在纸上&lt;/strong&gt;的格点（也就是说平面不是无限大），那就可以用简单的离散运算来取得每一个选定点上的光强。&lt;/p&gt;
-
 &lt;h4 id=&#34;221-计算数据&#34;&gt;2.2.1 计算数据&lt;/h4&gt;
-
 &lt;p&gt;按上文所述的方法，我们便可以计算了。&lt;/p&gt;
-
 &lt;p&gt;在计算时要注意：光线向量是&lt;strong&gt;可以变动&lt;/strong&gt;的，因为有无数条从无数个方向打到平面上的光，而平面（在我们的视角）只有一个法向量，因此需要把光线向量的坐标设为变量。&lt;/p&gt;
-
 &lt;p&gt;其次，就是炼丹学家喜闻乐见的&lt;strong&gt;归一化&lt;/strong&gt; (normalization)。这意味着要把所有向量转化为单位向量。实际上这很好办，直接用向量除以自己的&lt;strong&gt;模&lt;/strong&gt; (norm) 就行。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;定义 2&lt;/strong&gt;.   向量 $\mathbf{v}$ 的模为根号下每个方向的坐标的平方之和，记作 $|\mathbf{v}|$。&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;定义 2&lt;/strong&gt;.	向量 $\mathbf{v}$ 的模为根号下每个方向的坐标的平方之和，记作 $|\mathbf{v}|$。&lt;/p&gt;
 &lt;p&gt;然后再用光线向量和法向量的单位向量来计算夹角余弦：
-&lt;span  class=&#34;math&#34;&gt;\(
+$$
 \cos \theta = \frac{\frac{\mathbf{v_l}}{|\mathbf{v_l}|}\cdot\frac{\mathbf{n}}{|\mathbf{n}|}}{|\frac{\mathbf{v_l}}{|\mathbf{v_l}|}||\frac{\mathbf{n}}{|\mathbf{n}|}|}
-\)&lt;/span&gt;&lt;/p&gt;
-
+$$&lt;/p&gt;
 &lt;hr&gt;
-
-&lt;p&gt;&lt;strong&gt;扩展阅读&lt;/strong&gt;    归一化的方法很多，包括但不限于 Sigmoid，softmax 等。但此处，直接把每个数据除以该组数据中的最大值即可。&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;扩展阅读&lt;/strong&gt;	归一化的方法很多，包括但不限于 Sigmoid，softmax 等。但此处，直接把每个数据除以该组数据中的最大值即可。&lt;/p&gt;
 &lt;h2 id=&#34;3-得到结果&#34;&gt;3. 得到结果&lt;/h2&gt;
-
 &lt;h3 id=&#34;31-准备&#34;&gt;3.1. 准备&lt;/h3&gt;
-
 &lt;p&gt;理论上，像上面这样就可以了。但即使考虑的是平面且采样点有限，挨个手算也太复杂了。我们需要利用 &lt;code&gt;Python&lt;/code&gt;。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph LR;
 A(设定平面和点光源位置) ---|归一化| B[计算点积];
 B --&amp;gt; C[映射到光强];
 C --&amp;gt; D[按行列输出到终端];
-D --&amp;gt; E(结束)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样就需要向量来进行计算。由于 &lt;code&gt;Python&lt;/code&gt; 不自带向量，所以必须写一个向量库。&lt;/p&gt;
+D --&amp;gt; E(结束)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这样就需要向量来进行计算。由于 &lt;code&gt;Python&lt;/code&gt; 不自带向量，所以必须写一个向量库。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;|- venv
 |  |- bin
 |  |- lib
@@ -145,94 +103,75 @@ D --&amp;gt; E(结束)&lt;/code&gt;&lt;/pre&gt;
 |
 |  Float.py
 |  Vector.py
-|  main.py&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;center&gt;
+|  main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;center&gt;
   &lt;b&gt;树状图1&lt;/b&gt;：典型结构
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;p&gt;其中，&lt;code&gt;Float.py&lt;/code&gt; 和 &lt;code&gt;Vector.py&lt;/code&gt; 都是所需的库，而 &lt;code&gt;main.py&lt;/code&gt; 实现了流程图中的过程。&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
   &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dY1xA.png&#34; alt=&#34;2dY1xA.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;p&gt;这是一个二维浮点数组类。它的 &lt;code&gt;magnitude()&lt;/code&gt; 方法代表这个数组的模，因此可以用类似的思路，写一个三维浮点类，并用三维向量类来继承。这样，可以大大减少冗余代码量。&lt;/p&gt;
-
 &lt;p&gt;略去中间步骤，则最终可以得到：&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
   &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dYbdK.png&#34; alt=&#34;2dYbdK.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;不要乍一看被吓到了。实际上，真正起效的，只有 &lt;code&gt;__mul__()&lt;/code&gt; 和 &lt;code&gt;ang()&lt;/code&gt; 方法。前者是 &lt;code&gt;Python&lt;/code&gt; 的魔术方法 (magic methods) 之一，允许用算符对两个对象进行运算操作。此处，&amp;quot;mul&amp;quot; 就是 multiply 的意思，方法内部重写的代码规定了两个向量如何相乘。&lt;/p&gt;
-
+&lt;/center&gt;
+&lt;p&gt;不要乍一看被吓到了。实际上，真正起效的，只有 &lt;code&gt;__mul__()&lt;/code&gt; 和 &lt;code&gt;ang()&lt;/code&gt; 方法。前者是 &lt;code&gt;Python&lt;/code&gt; 的魔术方法 (magic methods) 之一，允许用算符对两个对象进行运算操作。此处，&amp;ldquo;mul&amp;rdquo; 就是 multiply 的意思，方法内部重写的代码规定了两个向量如何相乘。&lt;/p&gt;
 &lt;p&gt;第 &lt;code&gt;22&lt;/code&gt; 行，就是在 &lt;strong&gt;2.2&lt;/strong&gt; 中提到过的夹角公式。同样，这个类也有 &lt;code&gt;normalized()&lt;/code&gt; 方法来进行归一化处理。&lt;/p&gt;
-
 &lt;h3 id=&#34;32-计算&#34;&gt;3.2. 计算&lt;/h3&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
   &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dN3HP.png&#34; alt=&#34;2dN3HP.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;p&gt;这就是我们代码的核心，它通过计算夹角并一一映射到坐标点，提供了每个点的光强信息。&lt;/p&gt;
-
 &lt;p&gt;请注意其中第二行的注释。实际上并不需要定义光线向量，因为以击中点为参考系时，向量是可变的。因此我们可以直接在循环体内进行定义。&lt;/p&gt;
-
 &lt;p&gt;除此之外，9-12行的判断结构是为了把角度限制在0-90度内。但同样可以采用绝对值，这样会比判断快得多。&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
   &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dNgCF.png&#34; alt=&#34;2dNgCF.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;p&gt;最后是 &lt;code&gt;Parse&lt;/code&gt; 函数。它分为两部分，第一部分是把光强和字符一一映射，第二部分是将数据表示为可视化方阵。这就是用 &lt;code&gt;Python&lt;/code&gt; 模拟光在平面上的照射情况的一个例子。&lt;/p&gt;
-
 &lt;h3 id=&#34;33-示例&#34;&gt;3.3 示例&lt;/h3&gt;
-
 &lt;ol&gt;
-&lt;li&gt;平面法向量 $(0, 0, 1)$， 点光源位置 $(0,0,0.1)$，大小 $35\times35$。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;平面法向量 $(0, 0, 1)$， 点光源位置 $(0,0,0.1)$，大小 $35\times35$。&lt;/p&gt;
+&lt;center&gt;
+  &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dNoE6.png&#34; alt=&#34;2dNoE6.png&#34; border=&#34;0&#34; style=&#34;zoom: 75%&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;平面法向量 $(3, 0, 1)$，其他条件不变。&lt;/p&gt;
+&lt;center&gt;
+  &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dNjKA.png&#34; alt=&#34;2dNjKA.png&#34; border=&#34;0&#34; style=&#34;zoom: 75%&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;img src=&amp;#34;https://z3.ax1x.com/2021/06/07/2dNoE6.png&amp;#34; alt=&amp;#34;2dNoE6.png&amp;#34; border=&amp;#34;0&amp;#34; style=&amp;#34;zoom: 75%&amp;#34;/&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;平面法向量 $(3, 0, 1)$，其他条件不变。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;img src=&amp;#34;https://z3.ax1x.com/2021/06/07/2dNjKA.png&amp;#34; alt=&amp;#34;2dNjKA.png&amp;#34; border=&amp;#34;0&amp;#34; style=&amp;#34;zoom: 75%&amp;#34;/&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
-
 &lt;h3 id=&#34;4-总结&#34;&gt;4. 总结&lt;/h3&gt;
-
 &lt;p&gt;本文在图形学的基础上，使用 &lt;code&gt;Python&lt;/code&gt; 对光线在平面上的光强进行了离散、简单的模拟。&lt;/p&gt;
-
 &lt;p&gt;下一篇文章将涉及到三维视图映射（相机视角）、曲面光强、光线衰减和漫反射，实际上是对此处介绍的 Lambert 光照模型的补全。以后还将介绍 Phong 光照模型和渲染方程，以及 BRDF 和 BSDF（双向反射、散射分布函数）。&lt;/p&gt;
-
 &lt;p&gt;感谢阅读。&lt;/p&gt;
-
 &lt;h3 id=&#34;5-参考&#34;&gt;5. 参考&lt;/h3&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;这里的参考并不是指这篇文章参考了多少文献，而是提供一些扩展内容。&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://benedikt-bitterli.me/tantalum/tantalum.html&#34;&gt;光路模拟&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://benedikt-bitterli.me/tantalum/tantalum.html&#34;&gt;光路模拟&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这是个非常棒的网站，而且作者在网站的博客内写的文章比我写的内容的水平高的多。强烈推荐。&lt;/p&gt;
-
-&lt;p&gt;摘录其中几个极巧妙的公式：
-   &lt;span  class=&#34;math&#34;&gt;\(
-   L_i(\mathbf{x}\leftarrow\vec{\omega})=L_o(t(\mathbf{x},\vec{\omega})\rightarrow-\vec{\omega}).\\
-   L_o(\mathbf{x}\rightarrow\vec{\omega}_o)=L_e(\mathbf{x}\rightarrow\vec{\omega}_o)+\int_\Theta f(\vec{\omega}_i\rightarrow\vec{\omega}_o)L_i(\mathbf{x} \leftarrow\vec{\omega}_i)|\vec{\omega}_i\cdot N(\mathbf{x})|\mathrm{d}\vec{\omega}_i.\\
-   \phi(\mathbf{x})=\int_{S^1}L_i(\mathbf{x}\leftarrow\vec{\omega})\mathrm{d}\vec{\omega}.\\
-   \phi(\mathbf{x})\approx\sum_{i=1}^N\frac{L_o(t(\mathbf{x},-\vec{X}_i)\rightarrow\vec{X}_i))}{\operatorname{pdf}(\vec{X}_i)}.
-   \)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;（不知道是 $\KaTeX$ 还是 Hugo 的原因，只要公式内有 &lt;code&gt;aligned&lt;/code&gt; 环境或换行符，就无法正确渲染，只能这样替代。）&lt;/p&gt;
+&lt;p&gt;摘录其中几个极巧妙的公式：&lt;/p&gt;
+&lt;p&gt;$$
+L_i(\mathbf{x}\leftarrow\vec{\omega})=L_o(t(\mathbf{x},\vec{\omega})\rightarrow-\vec{\omega}).
+$$&lt;/p&gt;
+&lt;p&gt;$$
+L_o(\mathbf{x}\rightarrow\vec{\omega}_o)=L_e(\mathbf{x}\rightarrow\vec{\omega}&lt;em&gt;o)+\int&lt;/em&gt;\Theta f(\vec{\omega}_i\rightarrow\vec{\omega}_o)L_i(\mathbf{x} \leftarrow\vec{\omega}_i)|\vec{\omega}_i\cdot N(\mathbf{x})|\mathrm{d}\vec{\omega}_i.
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\phi(\mathbf{x})=\int_{S^1}L_i(\mathbf{x}\leftarrow\vec{\omega})\mathrm{d}\vec{\omega}.
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\phi(\mathbf{x})\approx\sum_{i=1}^N\frac{L_o(t(\mathbf{x},-\vec{X}_i)\rightarrow\vec{X}_i))}{\operatorname{pdf}(\vec{X}_i)}.
+$$&lt;/p&gt;
+&lt;p&gt;（不知道是 $\KaTeX$ 还是 Hugo 的原因，只要公式内有 &lt;code&gt;aligned&lt;/code&gt; 环境或换行符，就无法正确渲染，只能分开替代。）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 - https://calcraft.org/post/cn_2021-06-06-raytracing-101/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
