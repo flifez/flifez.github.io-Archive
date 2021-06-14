@@ -226,12 +226,13 @@ D --&amp;gt; E(结束)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;摘录其中几个极巧妙的公式：
    &lt;span  class=&#34;math&#34;&gt;\(
-   L_i(\mathbf{x}\leftarrow\vec{\omega})=L_o(t(\mathbf{x},\vec{\omega})\rightarrow-\vec{\omega}).\\\\\\
-   L_o(\mathbf{x}\rightarrow\vec{\omega}_o)=L_e(\mathbf{x}\rightarrow\vec{\omega}_o)+\int_\Theta f(\vec{\omega}_i\rightarrow\vec{\omega}_o)L_i(\mathbf{x} \leftarrow\vec{\omega}_i)|\vec{\omega}_i\cdot N(\mathbf{x})|\mathrm{d}\vec{\omega}_i.\\\\\\
-   \phi(\mathbf{x})=\int_{S^1}L_i(\mathbf{x}\leftarrow\vec{\omega})\mathrm{d}\vec{\omega}.\\\\\\
+   L_i(\mathbf{x}\leftarrow\vec{\omega})=L_o(t(\mathbf{x},\vec{\omega})\rightarrow-\vec{\omega}).\\
+   L_o(\mathbf{x}\rightarrow\vec{\omega}_o)=L_e(\mathbf{x}\rightarrow\vec{\omega}_o)+\int_\Theta f(\vec{\omega}_i\rightarrow\vec{\omega}_o)L_i(\mathbf{x} \leftarrow\vec{\omega}_i)|\vec{\omega}_i\cdot N(\mathbf{x})|\mathrm{d}\vec{\omega}_i.\\
+   \phi(\mathbf{x})=\int_{S^1}L_i(\mathbf{x}\leftarrow\vec{\omega})\mathrm{d}\vec{\omega}.\\
    \phi(\mathbf{x})\approx\sum_{i=1}^N\frac{L_o(t(\mathbf{x},-\vec{X}_i)\rightarrow\vec{X}_i))}{\operatorname{pdf}(\vec{X}_i)}.
-   \)&lt;/span&gt;
-   （不知道是 $\KaTeX$ 还是 Hugo 的原因，只要公式内有 &lt;code&gt;aligned&lt;/code&gt; 环境或换行符，就无法正确渲染，只能这样替代。）&lt;/p&gt;
+   \)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;（不知道是 $\KaTeX$ 还是 Hugo 的原因，只要公式内有 &lt;code&gt;aligned&lt;/code&gt; 环境或换行符，就无法正确渲染，只能这样替代。）&lt;/p&gt;
 - https://calcraft.org/post/cn_2021-06-06-raytracing-101/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
         </item>
     
