@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Posts</title>
+<title>密码学概述</title>
 
 
 
@@ -51,11 +51,17 @@
 
 
 
+  
+    <script src="/js/toc-collapse.js"></script>
+  
 
 
 
 
 
+
+
+<script src='https://unpkg.com/valine@1.4.14/dist/Valine.min.js'></script>
 
 
 
@@ -144,6 +150,11 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </div><div ref="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -159,8 +170,6 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 brightness_7
             </i>
         </a>
-        
-        
         
         
     </div>
@@ -215,6 +224,11 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 
             
             
+            <div class="toc">
+
+
+</div>
+            
         </div>
     </div>
 </div>
@@ -258,204 +272,105 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    密码学概述
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2021-06-27 22:05
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/learning">learning</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  renderMathInElement(document.body, {
+                          delimiters: [
+                              {left: "$$", right: "$$", display: true},
+                              {left: "$", right: "$", display: false}
+                          ]
+                      });
+                });
+            </script>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <blockquote>
+<p>P ZQAE TQR.</p>
+<p><em>from</em> Alan Turing (<em>The Imitation Game</em>)</p>
+</blockquote>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2021-06-27</p>
+                    
+                </div>
+            </div>
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			下回<br>已经到头啦。
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://calcraft.org/post/cn_2021-06-06-raytracing-101/">
+			上回<br>光线追踪：初步
+                </a>
+                
+            </nav>
         
-            <a class="a-block">
-                <div class="post-item-wrapper post-item-wrapper-no-hover">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title post-item-title-small year">
-                                2021
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
             
-            <a href="/post/cn_2021-06-27-cryptology-overview/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                密码学概述
-                            </div>
-                            <div class="post-item-meta">
-    2021-06-27
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <div class="post-comment-wrapper">
+                
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-06-06-raytracing-101/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                光线追踪：初步
-                            </div>
-                            <div class="post-item-meta">
-    2021-06-05
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-04-24-math-neq/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                不等式及杂项
-                            </div>
-                            <div class="post-item-meta">
-    2021-04-24
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-26-wolfram-with-jekyll/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                如何在 Jupyter 中使用 Wolfram Engine
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-26
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-15-calcraft-tale-part-1/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Calcraft 的起源 (第一节)
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-15
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+<div id="vcomments"></div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-15-powerpy-development/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                PowerPy 开发日志
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-15
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-14-blender-smoke-simulation/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                如何在 Blender 2.9 中用 MantaFlow 模拟烟雾
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-14
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/post/cn_2021-02-14-tesseract-ideas/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Tesseract 想法 (2021)
-                            </div>
-                            <div class="post-item-meta">
-    2021-02-14
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
 
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
+
+
         
+
+            </div>
+        </div>
     </div>
 </div>
 
-
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
@@ -558,6 +473,16 @@ app = new Vue({
         this.handleResize();
         this.mounted = true;
 
+        
+            new Valine({
+                el: '#vcomments',
+                appId: "T29WEuKyGb7rg9h2l5J9dz68-gzGzoHsz",
+                appKey: "frvzT2QXnXWAHQE5uuTMyxG0",
+                requiredFields: ['nick','mail'],
+                avatar: 'retro',
+                enableQQ: true,
+                recordIP: true,
+            })
         
         
     },
