@@ -1,15 +1,25 @@
-### [FlifeX's Website](https://calcraft.org)
+# [FlifeX's Website](https://calcraft.org)
 
-Currently maintained by **Red**.
+Currently maintained by Red.
+
+Supported language: **Chinese (Simplified)**. More languages will be added soon.
 
 > FlifeX didn't say when to back. :(
 
----
+## Update
 
-#### Donate
+Red: I changed the CNAME to blog.calcraft.org.  
+
+
+## Blog To-Dos (sorted by priority)
+
+- [ ] Add English support
+- [x] Add donation QR code
+
+
+## [Donate](https://calcraft.org/dump/)
 
 If you like this website, consider supporting us.
 
-Please find the payment method in the website. ty very much!
-
+© FlifeX & Red, 2021
 
