@@ -6,6 +6,10 @@ Supported language: **Chinese (Simplified)**. More languages will be added soon.
 
 > FlifeX didn't say when to back. :(
 
+## Update
+
+Red: I changed the CNAME to blog.calcraft.org.  
+
 
 ## Blog To-Dos (sorted by priority)
 
