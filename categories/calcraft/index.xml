@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>calcraft on Academy of Bored Ones</title>
-    <link>https://calcraft.org/categories/calcraft/</link>
+    <link>https://blog.calcraft.org/categories/calcraft/</link>
     <description>Recent content in calcraft on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
-    <lastBuildDate>Mon, 15 Feb 2021 21:35:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/calcraft/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <copyright>2021 AcBO / FlifeX.</copyright>
+    <lastBuildDate>Mon, 15 Feb 2021 21:35:00 +0000</lastBuildDate><atom:link href="https://blog.calcraft.org/categories/calcraft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calcraft 的起源 (第一节)</title>
-      <link>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
       <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
       <description>Calcraft 的起源 什么是 Calcraft？它是个合成词 （Calculator + Minecraft）。
 在 2019 年 2 月, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 有史以来最伟大的游戏服务器。
  FlifeX：我的傻逼文笔不适合写这东西，以后看这里吧。</description>

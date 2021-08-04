@@ -2,29 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Academy of Bored Ones</title>
-    <link>https://calcraft.org/post/</link>
+    <link>https://blog.calcraft.org/post/</link>
     <description>Recent content in Posts on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
-    <lastBuildDate>Sun, 27 Jun 2021 22:05:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <copyright>2021 AcBO / FlifeX.</copyright>
+    <lastBuildDate>Sun, 27 Jun 2021 22:05:00 +0000</lastBuildDate><atom:link href="https://blog.calcraft.org/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>密码学概述</title>
-      <link>https://calcraft.org/post/cn_2021-06-27-cryptology-overview/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</link>
       <pubDate>Sun, 27 Jun 2021 22:05:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-06-27-cryptology-overview/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</guid>
       <description> P ZQAE TQR.
 from Alan Turing (The Imitation Game)
  </description>
     </item>
     
     <item>
-      <title>光线追踪：初步</title>
-      <link>https://calcraft.org/post/cn_2021-06-06-raytracing-101/</link>
+      <title>Raytracing: Preliminaries</title>
+      <link>https://blog.calcraft.org/post/untitled/</link>
       <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
+      <guid>https://blog.calcraft.org/post/untitled/</guid>
+      <description>1. Introduction  This passage may need some knowledge of vectors.
+ Nowadays, Computer Graphics (CG) has had a wide impact on our daily lives. Here, I will not discuss the exact influence of CG technology, but wind our way from its basis and have a short exploration on it.
+The goal to be achieved is simulating a simple model: a point light source is located directly above a plane and find the light intensity of the light it emits (without considering attenuation - which involves the inverse square law of light propagation) at various points on that plane.</description>
+    </item>
+    
+    <item>
+      <title>光线追踪：初步</title>
+      <link>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</link>
+      <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
+      
+      <guid>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
       <description>1. 引言  本文需要一些关于向量的知识。
  时至今日，计算机图形学 (Computer Graphics, CG) 已经进入了生活的方方面面。这里不探讨 CG 技术对生活带来的影响，仅从它的基础出发，用 Python （没用到 C++）来进行图形学的简要探讨。
 本文所要实现的目标，是模拟极为简单的一个模型：一个点光源位于平面的正上方，求它发出的光（不考虑衰减——这涉及到光传播中的平方反比定律）在该平面上各点的光强。
@@ -37,10 +48,10 @@ from Alan Turing (The Imitation Game)
     
     <item>
       <title>不等式及杂项</title>
-      <link>https://calcraft.org/post/cn_2021-04-24-math-neq/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</link>
       <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</guid>
       <description>引言  这篇文章将介绍一些著名的不等式。
  1. 均值不等式 这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了： $$ \sqrt{ab}\leq\frac{a+b}{2} $$ 然而，均值不等式还有多元形式。 $$ \sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n} $$ 例如， $$ \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5} $$
 2. 琴生 (Jensen) 不等式 另一个著名的不等式。它的一个特例是 $$ \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right). $$ 你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。 $$ \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right) $$ 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。
@@ -51,10 +62,10 @@ from Alan Turing (The Imitation Game)
     
     <item>
       <title>如何在 Jupyter 中使用 Wolfram Engine</title>
-      <link>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
       <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
       <description>预计阅读时间：10分钟   引言  我发现我已经十天没更新这玩意了……
  此教程将介绍一种在 Jupyter 中使用 Wolfram Engine 的方法，以便获得更高的数据处理效率。
 安装 Wolfram Engine   你可以在这里免费下载 Wolfram Engine。实际上它也能在附带的 WolframScript 中运行，不过我们的目标是将它植入为 Jupyter 的一个内核。
@@ -67,10 +78,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>Calcraft 的起源 (第一节)</title>
-      <link>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
       <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
       <description>Calcraft 的起源 什么是 Calcraft？它是个合成词 （Calculator + Minecraft）。
 在 2019 年 2 月, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 有史以来最伟大的游戏服务器。
  FlifeX：我的傻逼文笔不适合写这东西，以后看这里吧。</description>
@@ -78,10 +89,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>PowerPy 开发日志</title>
-      <link>https://calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
       <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
       <description>引言 PowerPy 是一个用 Python 写的 Shell，致力于达到与bash，zsh等 Linux Shell 相似的功能。
 目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 eval 函数。
 典型函数 PowerPy 的开发过程中，我也遇到过许多恶心的问题。下面是一些典型的函数。
@@ -91,10 +102,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
-      <link>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
       <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
       <description>引言 示例最终效果
 你需要安装 Blender (在此教程中，我的版本是 2.91.0)，如果你曾经使用过 Blender 就更好了。
 烟雾   创建一个默认的立方体。
@@ -112,10 +123,10 @@ In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</descriptio
     
     <item>
       <title>Tesseract 想法 (2021)</title>
-      <link>https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
       <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
       <description>Tesseract 长期计划 最近更新：2021/02/14
  一个人不应止步于眼前的世界。
  Tesseract 是一个致力于拥有世界上最安全的聊天环境的聊天软件。

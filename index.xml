@@ -1,39 +1,199 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Academy of Bored Ones</title>
-    <link>https://calcraft.org/</link>
+    <link>https://blog.calcraft.org/</link>
     <description>Recent content on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
+    <language>zh-cn</language>
+    <copyright>2021 AcBO / FlifeX.</copyright>
     <lastBuildDate>Sun, 27 Jun 2021 22:05:00 +0000</lastBuildDate>
     
-        <atom:link href="https://calcraft.org/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.calcraft.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>密码学概述</title>
-        <link>https://calcraft.org/post/cn_2021-06-27-cryptology-overview/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</link>
         <pubDate>Sun, 27 Jun 2021 22:05:00 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-06-27-cryptology-overview/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-06-27-cryptology-overview/ -&lt;blockquote&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/ -&lt;blockquote&gt;
 &lt;p&gt;P ZQAE TQR.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;from&lt;/em&gt; Alan Turing (&lt;em&gt;The Imitation Game&lt;/em&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
-- https://calcraft.org/post/cn_2021-06-27-cryptology-overview/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/ - 2021 AcBO / FlifeX.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Raytracing: Preliminaries</title>
+        <link>https://blog.calcraft.org/post/untitled/</link>
+        <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
+        
+        <guid>https://blog.calcraft.org/post/untitled/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/untitled/ -&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This passage may need some knowledge of vectors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Nowadays, Computer Graphics (CG) has had a wide impact on our daily lives. Here, I will not discuss the exact influence of CG technology, but wind our way from its basis and have a short exploration on it.&lt;/p&gt;
+&lt;p&gt;The goal to be achieved is simulating a simple model: a &lt;strong&gt;point light source&lt;/strong&gt; is located directly above a &lt;strong&gt;plane&lt;/strong&gt; and find the light intensity of the light it emits (without considering attenuation - which involves the &lt;strong&gt;inverse square law&lt;/strong&gt; of light propagation) at various points on that plane.&lt;/p&gt;
+&lt;p&gt;Please notice that the light mentioned is parallel to your computer&amp;rsquo;s screen. This way, we can reduce the number of coordinate transformations and mappings, and make it easier for first-time CG readers to quickly understand.&lt;/p&gt;
+&lt;p&gt;The article is the first in &amp;ldquo;&lt;strong&gt;Raytracing Series&lt;/strong&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All schematics in the article are rendered using Blender.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-cg-hello-world-light-beams&#34;&gt;2. CG &amp;ldquo;Hello World&amp;rdquo;: Light beams&lt;/h2&gt;
+&lt;p&gt;This subtitle has explained what we will handle clearly, as well as its location in the whole CG learing process. Let&amp;rsquo;s introduce some concepts first.&lt;/p&gt;
+&lt;h3 id=&#34;21-the-reflection-of-light&#34;&gt;2.1 The reflection of light&lt;/h3&gt;
+&lt;center&gt;
+  &lt;pr&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dEoAP.png&#34; alt=&#34;2dEoAP.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;center&gt; &lt;b&gt;Fig. 1&lt;/b&gt;: The reflection of a beam &lt;/center&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.&lt;/strong&gt;	As &lt;strong&gt;Fig. 1&lt;/strong&gt; has shown,$A$ is one certain part of a smooth curve. Then, counstruct a tangent $t$ through one poinn on $A$ and the vertical line $n$ of $t$ at the intersection $N$. We call $n$ the &lt;strong&gt;normal&lt;/strong&gt; of $A$ at $N$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Look again at &lt;strong&gt;Figure 1&lt;/strong&gt;. This time we note the line that hits the curve $A$. If we consider it here as a ray and the curve $A$ as a mirror, then it is called &lt;strong&gt;incident ray&lt;/strong&gt;. Naturally, there must be &lt;strong&gt;reflected ray&lt;/strong&gt;, which is symmetric to the incident ray about the normal $n$ axis. The angle $\theta$ in the figure is called the &lt;strong&gt;incident angle&lt;/strong&gt;, and from the above we know that the &lt;strong&gt;reflected angle&lt;/strong&gt; is numerically equal to the angle of incidence.&lt;/p&gt;
+&lt;p&gt;You may have been wondering: with these angles, how to portray the extent to which the light illuminates the object? Let&amp;rsquo;s not look at this picture for a while, this article will introduce one by one, how light exactly illuminates the world in the glass.&lt;/p&gt;
+&lt;h4 id=&#34;211-angle-and-brightness&#34;&gt;2.1.1 Angle and brightness&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What ON EARTH does &amp;ldquo;angle&amp;rdquo; have to do with &amp;ldquo;light and dark&amp;rdquo;?&lt;/p&gt;
+&lt;p&gt;There IS.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here is a restatement of the condition in the introduction section: the attenuation of light is not taken into account. Now, if you were to inscribe the relationship between the angle between the light and the plane and the intensity of the light hitting this point on the plane, how would you do it? Please think about it first, and then check the folded content below.&lt;/p&gt;
+&lt;details&gt; &lt;summary&gt;One possible answer&lt;/summary&gt; &lt;pre&gt;
+Life experience tells us that light will be brightest when it hits &lt;b&gt;something&lt;/b&gt; vertically.
+(Please don&#39;t imagine the beam of a flashlight or searchlight - we&#39;re just talking about a sliver of light, which has no volume.)
+If the angle of the light to the object is 0 degrees, the object will not be illuminated.
+From &lt;b&gt;0 degrees to 90 degrees&lt;/b&gt;, from &lt;b&gt;pitch black to bright&lt;/b&gt;. Which &lt;b&gt;trigonometric function&lt;/b&gt; springs to mind?
+Exactly the &lt;b&gt;cosine function&lt;/b&gt;. So, calculate the cosine of the angle between the light and the plane normal vector and you will know how bright or dark the point is.
+&lt;/pre&gt; &lt;/details&gt;
+&lt;h3 id=&#34;22-light-vectors-and-planes&#34;&gt;2.2. Light, vectors and planes&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s continue to explore this question along the lines of what we did in &lt;strong&gt;2.1.1&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/06/06/2dEgpD.png&#34; alt=&#34;2dEgpD.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/p&gt;
+&lt;center&gt; &lt;b&gt;Fig. 2&lt;/b&gt;: A point light source over a plane &lt;/center&gt;
+&lt;p&gt;As in the figure, in space, we can consider the rays from the point source $L$ as vectors and reverse them, translating them to the point of contact between the ray and the plane, and then calculate the cosine of the angle between the vector where the vertical line at this point on the plane is located (we call it the &lt;strong&gt;normal vector&lt;/strong&gt;) and the angle of this ray.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why is not the angle of the ray to the plane calculated?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Since they are all vectors, the vector &lt;strong&gt;dot product&lt;/strong&gt; (dot product) can be considered. In general, the
+$$
+\mathbf{a}\cdot\mathbf{b}=|\mathbf{a}||\mathbf{b}|\cos\langle\mathbf{a}, \mathbf{b}\rangle
+$$
+This gives us the insight that the angle between two vectors can be expressed by their dot product. But how should one obtain the value of the dot product? In the following, the method of expressing the dot product in terms of coordinates is introduced.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Let $\mathbf{a}=(x_1, y_1, z_1)$ and $\mathbf{b}=(x_2, y_2, z_2)$, then their dot product $\mathbf{a}\cdot\mathbf{b}$.
+$$
+\mathbf{a}\cdot\mathbf{b}=x_1x_2+y_1y_2+z_1z_2
+$$
+In this way, the cosine of the angle between the ray and the plane normal vector can thus be derived from the coordinates of the ray.&lt;/p&gt;
+&lt;p&gt;A problem arises at this point: there are an infinite number of rays emanating from the point source $L$. If every ray is to be involved, then integration is essential.&lt;/p&gt;
+&lt;p&gt;However, if one now imagines a grid point paper and considers only the rays that hit &lt;strong&gt;on&lt;/strong&gt; the grid points, and only &lt;strong&gt;on&lt;/strong&gt; the grid points on the paper (i.e. the plane is not infinite), then one can use simple discrete operations to obtain the light intensity at each selected point.&lt;/p&gt;
+&lt;h4 id=&#34;221-calculate-the-data&#34;&gt;2.2.1. Calculate the data&lt;/h4&gt;
+&lt;p&gt;By following the method described above, we can then calculate it.&lt;/p&gt;
+&lt;p&gt;Note in the calculation that the ray vector is &lt;strong&gt;variable&lt;/strong&gt; because there are an infinite number of lights hitting the plane from an infinite number of directions, and the plane (in our view) has only one normal vector, so the coordinates of the ray vector need to set as variables.&lt;/p&gt;
+&lt;p&gt;The next step is the &lt;strong&gt;normalization&lt;/strong&gt; that machine learning scientists are interested in. This means converting all vectors to unit vectors. This is actually quite easy to do by dividing the vector by its own &lt;strong&gt;magnitude&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;.	The magnitude of the vector $\mathbf{v}$ is the sum of the squares of the coordinates of each direction under the radical, noted as $|\mathbf{v}|$.&lt;/p&gt;
+&lt;p&gt;The cosine of the pinch angle is then calculated using the unit vectors of the ray vector and the normal vector as follows.
+$$
+\cos \theta = \frac{\frac{\mathbf{v_l}}{|\mathbf{v_l}|}\cdot\frac{\mathbf{n}}{|\mathbf{n}|}}{|\frac{\mathbf{v_l}}{|\mathbf{v_l}|}||\frac{\mathbf{n}}{|\mathbf{n}|}|}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Extended Reading&lt;/strong&gt;	There are many methods of normalization, including but not limited to Sigmoid, softmax, etc. But here, it is straightforward to divide each data by the maximum value in that group.&lt;/p&gt;
+&lt;h2 id=&#34;3-getting-the-result&#34;&gt;3. Getting the result&lt;/h2&gt;
+&lt;h3 id=&#34;31-preparations&#34;&gt;3.1. Preparations&lt;/h3&gt;
+&lt;p&gt;In theory, something like the above would be fine. But even if we consider a plane and have a limited number of sampling points, it would be too complicated to calculate it by hand one by one. We need to use &lt;code&gt;Python&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph LR;
+A(Set plane and point source position) ---|normalize| B[Compute dot product];
+B --&amp;gt; C[Map to light intensity];
+C --&amp;gt; D[Output to the terminal by row];
+D --&amp;gt; E(End)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This requires vectors to perform the computation. Since &lt;code&gt;Python&lt;/code&gt; does not come with vectors, a library of vectors must be coded.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;|- venv
+|  |- bin
+|  |- lib
+|  |  include
+|  |  pyvenv.cfg
+|
+|  Float.py
+|  Vector.py
+|  main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;center&gt;
+  &lt;b&gt;Tree Diagram 1&lt;/b&gt;: Typical Structure
+&lt;/center&gt;
+&lt;p&gt;Among them, &lt;code&gt;Float.py&lt;/code&gt; and &lt;code&gt;Vector.py&lt;/code&gt; are the required libraries, while &lt;code&gt;main.py&lt;/code&gt; implements the process in the flowchart.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dYbdK.png&#34; alt=&#34;2dYbdK.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This is a two-dimensional floating-point array class. Its &lt;code&gt;magnitude()&lt;/code&gt; method represents the magnitude of this array, so it is possible to write a 3D floating point class along similar lines and inherit it with a 3D vector class. In this way, the amount of redundant code can be greatly reduced.&lt;/p&gt;
+&lt;p&gt;By omitting the intermediate steps, we end up with:&lt;/p&gt;
+&lt;center&gt;
+  &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dYbdK.png&#34; alt=&#34;2dYbdK.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;p&gt;Don&amp;rsquo;t be shocked at first glance. In fact, the only methods that really work are &lt;code&gt;__mul__()&lt;/code&gt; and &lt;code&gt;ang()&lt;/code&gt;. The former is one of &lt;code&gt;Python&lt;/code&gt;&amp;rsquo;s magic methods, which allows you to operate on two objects using operators. In this case, &amp;ldquo;mul&amp;rdquo; means multiply, and the code overridden inside the method specifies how to multiply two vectors.&lt;/p&gt;
+&lt;p&gt;Line &lt;code&gt;22&lt;/code&gt; is the pinch angle formula that was mentioned in &lt;strong&gt;2.2.&lt;/strong&gt; . Again, this class has the &lt;code&gt;normalized()&lt;/code&gt; method for normalization.&lt;/p&gt;
+&lt;h3 id=&#34;32-calcalution&#34;&gt;3.2. Calcalution&lt;/h3&gt;
+&lt;center&gt;
+  &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dN3HP.png&#34; alt=&#34;2dN3HP.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;p&gt;This is the core of our code, it provides information about the light intensity of each point by calculating the pinch angles and mapping them one by one to coordinate points.&lt;/p&gt;
+&lt;p&gt;Note the comment on the second line of it. It is not actually necessary to define the light vector, because this vector is variable when using the hit point as the reference system. Therefore we can define it directly within the loop body.&lt;/p&gt;
+&lt;p&gt;In addition to that, the judgment structure in lines 9-12 is designed to limit the angle to 0-90 degrees. But again, you can use absolute values, this will be much faster than the judgment.&lt;/p&gt;
+&lt;center&gt;
+  &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dNgCF.png&#34; alt=&#34;2dNgCF.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;p&gt;And finally comes the &lt;code&gt;Parse&lt;/code&gt; function. It is divided into two parts, the first part is to map light intensity to characters one by one, and the second part is to represent the data as a visual grid. So this is an example of using &lt;code&gt;Python&lt;/code&gt; to simulate the illumination of light on a plane.&lt;/p&gt;
+&lt;h3 id=&#34;33-examples&#34;&gt;3.3 Examples&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Plane normal vector $(0, 0, 1)$, point source position $(0,0,0.1)$, size $35\times35$​.&lt;/p&gt;
+&lt;center&gt;
+  &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dNoE6.png&#34; alt=&#34;2dNoE6.png&#34; border=&#34;0&#34; style=&#34;zoom: 75%&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plane normal vector $(3, 0, 1)$​, other conditions remain unchanged.&lt;/p&gt;
+&lt;center&gt;
+  &lt;img src=&#34;https://z3.ax1x.com/2021/06/07/2dNjKA.png&#34; alt=&#34;2dNjKA.png&#34; border=&#34;0&#34; style=&#34;zoom: 75%&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;4-conclusion&#34;&gt;4. Conclusion&lt;/h2&gt;
+&lt;p&gt;This article presented a discrete, simple simulation of the light intensity of light on a plane using &lt;code&gt;Python&lt;/code&gt;, based on Computer Graphics.&lt;/p&gt;
+&lt;p&gt;The next article will involve 3D view mapping (camera view), surface light intensity, light attenuation, and diffuse reflection, and is actually a complement to the Lambert illumination model presented here. The Phong illumination model and rendering equations, as well as the BSDF (Bidirectional Scattering Distribution Function) will be covered later.&lt;/p&gt;
+&lt;p&gt;Thanks for reading.&lt;/p&gt;
+&lt;h2 id=&#34;5-references&#34;&gt;5. References&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The reference here does not refer to how much literature is referenced in this article, but rather to provide some extended content.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://benedikt-bitterli.me/tantalum/tantalum.html&#34;&gt;Lightpath Simulation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a great site and the author writes at a much higher level within the site&amp;rsquo;s blog than the content I write. Highly recommended.&lt;/p&gt;
+&lt;p&gt;I also excerpted a few of the extremely clever formulas:
+$$
+L_i(\mathbf{x}\leftarrow\vec{\omega})=L_o(t(\mathbf{x},\vec{\omega})\rightarrow-\vec{\omega}).
+$$&lt;/p&gt;
+&lt;p&gt;$$
+L_o(\mathbf{x}\rightarrow\vec{\omega}_o)=L_e(\mathbf{x}\rightarrow\vec{\omega}&lt;em&gt;o)+\int&lt;/em&gt;\Theta f(\vec{\omega}_i\rightarrow\vec{\omega}_o)L_i(\mathbf{x} \leftarrow\vec{\omega}_i)|\vec{\omega}_i\cdot N(\mathbf{x})|\mathrm{d}\vec{\omega}_i.
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\phi(\mathbf{x})=\int_{S^1}L_i(\mathbf{x}\leftarrow\vec{\omega})\mathrm{d}\vec{\omega}.
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\phi(\mathbf{x})\approx\sum_{i=1}^N\frac{L_o(t(\mathbf{x},-\vec{X}_i)\rightarrow\vec{X}_i))}{\operatorname{pdf}(\vec{X}_i)}.
+$$&lt;/p&gt;
+&lt;p&gt;(I don&amp;rsquo;t know if it&amp;rsquo;s $\KaTeX$ or Hugo, but whenever there&amp;rsquo;s an &lt;code&gt;aligned&lt;/code&gt; environment or line break inside a formula, it doesn&amp;rsquo;t render correctly and has to be replaced separately.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+- https://blog.calcraft.org/post/untitled/ - 2021 AcBO / FlifeX.</description>
         </item>
     
     
     
         <item>
         <title>光线追踪：初步</title>
-        <link>https://calcraft.org/post/cn_2021-06-06-raytracing-101/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</link>
         <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-06-06-raytracing-101/ -&lt;h2 id=&#34;1-引言&#34;&gt;1. 引言&lt;/h2&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/ -&lt;h2 id=&#34;1-引言&#34;&gt;1. 引言&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本文需要一些关于向量的知识。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -67,7 +227,7 @@
 从&lt;b&gt;0度到90度&lt;/b&gt;，从&lt;b&gt;漆黑到明亮&lt;/b&gt;。你想到了哪个&lt;b&gt;三角函数&lt;/b&gt;？
 正是&lt;b&gt;余弦函数&lt;/b&gt;。因此，计算出光和平面法向量的夹角余弦，便可以知道该点的明暗。
 &lt;/pre&gt; &lt;/details&gt;
-&lt;h3 id=&#34;22-向量光线与平面&#34;&gt;2.2. 向量、光线与平面&lt;/h3&gt;
+### 2.2. 向量、光线与平面
 &lt;p&gt;让我们顺着&lt;strong&gt;2.1.1&lt;/strong&gt;中的思路，继续探究这个问题。&lt;/p&gt;
 &lt;center&gt;
   &lt;img src=&#34;https://z3.ax1x.com/2021/06/06/2dEgpD.png&#34; alt=&#34;2dEgpD.png&#34; border=&#34;0&#34; style=&#34;zoom: 50%&#34; /&gt;&lt;/a&gt;
@@ -159,11 +319,11 @@ D --&amp;gt; E(结束)
 &lt;/center&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;4-总结&#34;&gt;4. 总结&lt;/h3&gt;
+&lt;h2 id=&#34;4-总结&#34;&gt;4. 总结&lt;/h2&gt;
 &lt;p&gt;本文在图形学的基础上，使用 &lt;code&gt;Python&lt;/code&gt; 对光线在平面上的光强进行了离散、简单的模拟。&lt;/p&gt;
-&lt;p&gt;下一篇文章将涉及到三维视图映射（相机视角）、曲面光强、光线衰减和漫反射，实际上是对此处介绍的 Lambert 光照模型的补全。以后还将介绍 Phong 光照模型和渲染方程，以及 BRDF 和 BSDF（双向反射、散射分布函数）。&lt;/p&gt;
+&lt;p&gt;下一篇文章将涉及到三维视图映射（相机视角）、曲面光强、光线衰减和漫反射，实际上是对此处介绍的 Lambert 光照模型的补全。以后还将介绍 Phong 光照模型和渲染方程，以及 BSDF（双向散射分布函数）。&lt;/p&gt;
 &lt;p&gt;感谢阅读。&lt;/p&gt;
-&lt;h3 id=&#34;5-参考&#34;&gt;5. 参考&lt;/h3&gt;
+&lt;h2 id=&#34;5-参考&#34;&gt;5. 参考&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里的参考并不是指这篇文章参考了多少文献，而是提供一些扩展内容。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -184,21 +344,21 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 \phi(\mathbf{x})\approx\sum_{i=1}^N\frac{L_o(t(\mathbf{x},-\vec{X}_i)\rightarrow\vec{X}_i))}{\operatorname{pdf}(\vec{X}_i)}.
 $$&lt;/p&gt;
-&lt;p&gt;（不知道是 $\KaTeX$ 还是 Hugo 的原因，只要公式内有 &lt;code&gt;aligned&lt;/code&gt; 环境或换行符，就无法正确渲染，只能分开替代。）&lt;/p&gt;
+&lt;p&gt;（不知道是 $\rm\LaTeX$​​ 还是 Hugo 的原因，只要公式内有 &lt;code&gt;aligned&lt;/code&gt; 环境或换行符，就无法正确渲染，只能分开替代。）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-- https://calcraft.org/post/cn_2021-06-06-raytracing-101/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/ - 2021 AcBO / FlifeX.</description>
         </item>
     
     
     
         <item>
         <title>不等式及杂项</title>
-        <link>https://calcraft.org/post/cn_2021-04-24-math-neq/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</link>
         <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-04-24-math-neq/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-04-24-math-neq/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这篇文章将介绍一些著名的不等式。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -242,18 +402,18 @@ $$
 $$
 看起来不太友好，对吧？&lt;/p&gt;
 &lt;p&gt;（未完待续）&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-04-24-math-neq/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-04-24-math-neq/ - 2021 AcBO / FlifeX.</description>
         </item>
     
     
     
         <item>
         <title>如何在 Jupyter 中使用 Wolfram Engine</title>
-        <link>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
         <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ -&lt;ul&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ -&lt;ul&gt;
 &lt;li&gt;预计阅读时间：&lt;strong&gt;10分钟&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 
@@ -297,34 +457,34 @@ reslist &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
 ListLinePlot[testlist]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们会得到一个显示了积分结果的图。这比 &lt;code&gt;matplotlib&lt;/code&gt; 包不知道快到哪里去了。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;FlifeX&lt;/em&gt;&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/ - 2021 AcBO / FlifeX.</description>
         </item>
     
     
     
         <item>
         <title>Calcraft 的起源 (第一节)</title>
-        <link>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
         <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ -&lt;h3 id=&#34;calcraft-的起源&#34;&gt;Calcraft 的起源&lt;/h3&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ -&lt;h3 id=&#34;calcraft-的起源&#34;&gt;Calcraft 的起源&lt;/h3&gt;
 &lt;p&gt;什么是 Calcraft？它是个合成词 （&lt;strong&gt;Cal&lt;/strong&gt;culator + Mine&lt;strong&gt;craft&lt;/strong&gt;）。&lt;/p&gt;
 &lt;p&gt;在 &lt;strong&gt;2019 年 2 月&lt;/strong&gt;, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 有史以来最伟大的游戏服务器。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;FlifeX&lt;/strong&gt;：我的傻逼文笔不适合写这东西，以后看&lt;a href=&#34;https://shimo.im/docs/hYpxvWJDkYtYHy9d/&#34;&gt;这里&lt;/a&gt;吧。&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/ - 2021 AcBO / FlifeX.</description>
         </item>
     
     
     
         <item>
         <title>PowerPy 开发日志</title>
-        <link>https://calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
         <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-15-powerpy-development/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/ -&lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;PowerPy&lt;/strong&gt; 是一个用 Python 写的 Shell，致力于达到与&lt;code&gt;bash&lt;/code&gt;，&lt;code&gt;zsh&lt;/code&gt;等 Linux Shell 相似的功能。&lt;/p&gt;
 &lt;p&gt;目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 &lt;code&gt;eval&lt;/code&gt; 函数。&lt;/p&gt;
 &lt;h3 id=&#34;典型函数&#34;&gt;典型函数&lt;/h3&gt;
@@ -339,18 +499,18 @@ ListLinePlot[testlist]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;是的，你也许会认为：“就这？”，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 &lt;code&gt;eval()&lt;/code&gt; 函数。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-- https://calcraft.org/post/cn_2021-02-15-powerpy-development/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/ - 2021 AcBO / FlifeX.</description>
         </item>
     
     
     
         <item>
         <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
-        <link>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
         <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ -&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=1354201856&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ -&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=1354201856&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
 &lt;h3 id=&#34;引言&#34;&gt;引言&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/02/14828e06d0c47839.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;示例最终效果&lt;/em&gt;&lt;/p&gt;
@@ -436,18 +596,18 @@ ListLinePlot[testlist]
 &lt;p&gt;如果你不想自己做，我也提供一份 &lt;a href=&#34;129.211.80.104/smoke.blend&#34;&gt;.blend 文件&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;玩的开心！&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;FlifeX, MMXXXVIII&lt;/em&gt;&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/ - 2021 AcBO / FlifeX.</description>
         </item>
     
     
     
         <item>
         <title>Tesseract 想法 (2021)</title>
-        <link>https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
+        <link>https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
         <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
         
-        <guid>https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
-        <description>Academy of Bored Ones https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ -&lt;h3 id=&#34;tesseract-长期计划&#34;&gt;Tesseract 长期计划&lt;/h3&gt;
+        <guid>https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
+        <description>Academy of Bored Ones https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/ -&lt;h3 id=&#34;tesseract-长期计划&#34;&gt;Tesseract 长期计划&lt;/h3&gt;
 &lt;p&gt;最近更新：&lt;strong&gt;2021/02/14&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一个人不应止步于眼前的世界。&lt;/p&gt;
@@ -472,10 +632,8 @@ ListLinePlot[testlist]
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 &lt;a href=&#34;https://trello.com/b/GIljVysf/tesseract&#34;&gt;Trello 主页&lt;/a&gt;，&lt;a href=&#34;https://github.com/flifez/Tesseract&#34;&gt;GitHub 仓库&lt;/a&gt;，和 &lt;u&gt;Discord 服务器&lt;/u&gt;。&lt;/p&gt;
-- https://calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</description>
+- https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/ - 2021 AcBO / FlifeX.</description>
         </item>
-    
-    
     
     
     

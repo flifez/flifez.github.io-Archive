@@ -2,29 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>learning on Academy of Bored Ones</title>
-    <link>https://calcraft.org/categories/learning/</link>
+    <link>https://blog.calcraft.org/categories/learning/</link>
     <description>Recent content in learning on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>2021 AcBO / FlifeX. 本站遵循 CC BY-NC-SA 4.0 协议.</copyright>
-    <lastBuildDate>Sun, 27 Jun 2021 22:05:00 +0000</lastBuildDate><atom:link href="https://calcraft.org/categories/learning/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <copyright>2021 AcBO / FlifeX.</copyright>
+    <lastBuildDate>Sun, 27 Jun 2021 22:05:00 +0000</lastBuildDate><atom:link href="https://blog.calcraft.org/categories/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>密码学概述</title>
-      <link>https://calcraft.org/post/cn_2021-06-27-cryptology-overview/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</link>
       <pubDate>Sun, 27 Jun 2021 22:05:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-06-27-cryptology-overview/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</guid>
       <description> P ZQAE TQR.
 from Alan Turing (The Imitation Game)
  </description>
     </item>
     
     <item>
-      <title>光线追踪：初步</title>
-      <link>https://calcraft.org/post/cn_2021-06-06-raytracing-101/</link>
+      <title>Raytracing: Preliminaries</title>
+      <link>https://blog.calcraft.org/post/untitled/</link>
       <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
+      <guid>https://blog.calcraft.org/post/untitled/</guid>
+      <description>1. Introduction  This passage may need some knowledge of vectors.
+ Nowadays, Computer Graphics (CG) has had a wide impact on our daily lives. Here, I will not discuss the exact influence of CG technology, but wind our way from its basis and have a short exploration on it.
+The goal to be achieved is simulating a simple model: a point light source is located directly above a plane and find the light intensity of the light it emits (without considering attenuation - which involves the inverse square law of light propagation) at various points on that plane.</description>
+    </item>
+    
+    <item>
+      <title>光线追踪：初步</title>
+      <link>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</link>
+      <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
+      
+      <guid>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
       <description>1. 引言  本文需要一些关于向量的知识。
  时至今日，计算机图形学 (Computer Graphics, CG) 已经进入了生活的方方面面。这里不探讨 CG 技术对生活带来的影响，仅从它的基础出发，用 Python （没用到 C++）来进行图形学的简要探讨。
 本文所要实现的目标，是模拟极为简单的一个模型：一个点光源位于平面的正上方，求它发出的光（不考虑衰减——这涉及到光传播中的平方反比定律）在该平面上各点的光强。
@@ -37,10 +48,10 @@ from Alan Turing (The Imitation Game)
     
     <item>
       <title>不等式及杂项</title>
-      <link>https://calcraft.org/post/cn_2021-04-24-math-neq/</link>
+      <link>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</link>
       <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
       
-      <guid>https://calcraft.org/post/cn_2021-04-24-math-neq/</guid>
+      <guid>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</guid>
       <description>引言  这篇文章将介绍一些著名的不等式。
  1. 均值不等式 这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了： $$ \sqrt{ab}\leq\frac{a+b}{2} $$ 然而，均值不等式还有多元形式。 $$ \sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n} $$ 例如， $$ \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5} $$
 2. 琴生 (Jensen) 不等式 另一个著名的不等式。它的一个特例是 $$ \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right). $$ 你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。 $$ \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right) $$ 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。

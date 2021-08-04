@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academy of Bored Ones</title>
+    <link>https://blog.calcraft.org/</link>
+    <description>Recent content on Academy of Bored Ones</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2021 AcBO / FlifeX.</copyright>
+    <lastBuildDate>Sun, 27 Jun 2021 22:05:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://blog.calcraft.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+    
+    
+  </channel>
+</rss> 
