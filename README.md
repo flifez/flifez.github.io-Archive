@@ -1,14 +1,11 @@
 # [FlifeX's Website](https://calcraft.org)
 
-Currently maintained by Red.
+Supported Language(s): English.  
 
-Supported language: **Chinese (Simplified)**. More languages will be added soon.
-
-> FlifeX didn't say when to back. :(
 
 ## Update
 
-Red: I changed the CNAME to blog.calcraft.org.  
+Changed the CNAME to blog.calcraft.org.  
 
 
 ## Blog To-Dos (sorted by priority)

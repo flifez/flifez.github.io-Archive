@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Academy of Bored Ones</title>
-    <link>https://blog.calcraft.org/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>2021 AcBO / FlifeX.</copyright><atom:link href="https://blog.calcraft.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>FlifeX 2021</copyright><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

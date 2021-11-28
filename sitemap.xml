@@ -2,68 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.calcraft.org/</loc>
-    <lastmod>2021-06-27T22:05:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2021-11-27T20:50:23+08:00</lastmod>
   </url><url>
-    <loc>https://blog.calcraft.org/categories/</loc>
-    <lastmod>2021-06-27T22:05:00+00:00</lastmod>
+    <loc>/post/test/</loc>
+    <lastmod>2021-11-27T20:50:23+08:00</lastmod>
   </url><url>
-    <loc>https://blog.calcraft.org/categories/learning/</loc>
-    <lastmod>2021-06-27T22:05:00+00:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2021-11-27T20:50:23+08:00</lastmod>
   </url><url>
-    <loc>https://blog.calcraft.org/post/</loc>
-    <lastmod>2021-06-27T22:05:00+00:00</lastmod>
+    <loc>/about/</loc>
+    <lastmod>2021-11-27T20:50:23+08:00</lastmod>
   </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</loc>
-    <lastmod>2021-06-27T22:05:00+00:00</lastmod>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://blog.calcraft.org/post/untitled/</loc>
-    <lastmod>2021-06-05T22:05:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</loc>
-    <lastmod>2021-06-05T22:05:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</loc>
-    <lastmod>2021-05-22T20:52:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/categories/tutorial/</loc>
-    <lastmod>2021-02-26T20:44:31+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</loc>
-    <lastmod>2021-02-26T20:44:31+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/categories/calcraft/</loc>
-    <lastmod>2021-05-03T11:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</loc>
-    <lastmod>2021-05-03T11:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/categories/coding/</loc>
-    <lastmod>2021-02-15T19:49:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/</loc>
-    <lastmod>2021-02-15T19:49:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/categories/cool_things/</loc>
-    <lastmod>2021-02-14T12:34:56+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</loc>
-    <lastmod>2021-02-14T12:34:56+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/categories/tesseract/</loc>
-    <lastmod>2021-02-14T01:48:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/</loc>
-    <lastmod>2021-02-14T01:48:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.calcraft.org/secret/gr_hollow_knight/</loc>
-  </url><url>
-    <loc>https://blog.calcraft.org/secret/</loc>
-  </url><url>
-    <loc>https://blog.calcraft.org/dump/</loc>
-  </url><url>
-    <loc>https://blog.calcraft.org/tags/</loc>
-  </url><url>
-    <loc>https://blog.calcraft.org/about/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

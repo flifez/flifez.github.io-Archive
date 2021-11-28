@@ -2,141 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Academy of Bored Ones</title>
-    <link>https://blog.calcraft.org/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Academy of Bored Ones</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>2021 AcBO / FlifeX.</copyright>
-    <lastBuildDate>Sun, 27 Jun 2021 22:05:00 +0000</lastBuildDate><atom:link href="https://blog.calcraft.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>FlifeX 2021</copyright>
+    <lastBuildDate>Sat, 27 Nov 2021 20:50:23 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>密码学概述</title>
-      <link>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</link>
-      <pubDate>Sun, 27 Jun 2021 22:05:00 +0000</pubDate>
+      <title>Migrating to New Platform</title>
+      <link>/post/test/</link>
+      <pubDate>Sat, 27 Nov 2021 20:50:23 +0800</pubDate>
       
-      <guid>https://blog.calcraft.org/post/cn_2021-06-27-cryptology-overview/</guid>
-      <description> P ZQAE TQR.
-from Alan Turing (The Imitation Game)
- </description>
-    </item>
-    
-    <item>
-      <title>Raytracing: Preliminaries</title>
-      <link>https://blog.calcraft.org/post/untitled/</link>
-      <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/untitled/</guid>
-      <description>1. Introduction  This passage may need some knowledge of vectors.
- Nowadays, Computer Graphics (CG) has had a wide impact on our daily lives. Here, I will not discuss the exact influence of CG technology, but wind our way from its basis and have a short exploration on it.
-The goal to be achieved is simulating a simple model: a point light source is located directly above a plane and find the light intensity of the light it emits (without considering attenuation - which involves the inverse square law of light propagation) at various points on that plane.</description>
-    </item>
-    
-    <item>
-      <title>光线追踪：初步</title>
-      <link>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</link>
-      <pubDate>Sat, 05 Jun 2021 22:05:00 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/cn_2021-06-06-raytracing-101/</guid>
-      <description>1. 引言  本文需要一些关于向量的知识。
- 时至今日，计算机图形学 (Computer Graphics, CG) 已经进入了生活的方方面面。这里不探讨 CG 技术对生活带来的影响，仅从它的基础出发，用 Python （没用到 C++）来进行图形学的简要探讨。
-本文所要实现的目标，是模拟极为简单的一个模型：一个点光源位于平面的正上方，求它发出的光（不考虑衰减——这涉及到光传播中的平方反比定律）在该平面上各点的光强。
-请注意：上文所提到的平面平行于电脑屏幕。这样，在这篇文章中，我们就可以减少坐标变换与映射的出现，也更好让初次接触 CG 的读者快速理解。
-本文是系列文章的第一篇。作者本人也在同步学习。
- 本文中所有渲染示意图均用 Blender 制作。  2. 图形学 Hello World：光 这个小标题很好地说明了我们将要处理什么，以及它在整个图形学学习中的地位。先来介绍一些概念。
-2.1. 光的反射     图 1：光线的反射  定义 1.	如图 1，$A$ 是任意一段光滑曲线。则，过 $A$ 上一点作它的切线 $t$ (tangent)，再过交点 $N$ 作 $t$ 的垂线 $n$，我们把直线 $n$ 叫做曲线 $A$ 在点 $N$ 处的法线 (normal)。
- 再次看图 1。这一次我们注意打在曲线 $A$ 上的那条线。如果这里把它看作光线，并把曲线 $A$ 看作镜面，那么它叫做入射光 (incident ray)。自然，有入射光必定有反射光 (reflected ray)，它和入射光关于法线 $n$ 轴对称。图中的角 $\theta$ 叫做入射角 (incident angle)，由上文我们可知反射角 (reflected angle) 在数值上等于入射角。</description>
-    </item>
-    
-    <item>
-      <title>不等式及杂项</title>
-      <link>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</link>
-      <pubDate>Sat, 24 Apr 2021 21:37:00 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/cn_2021-04-24-math-neq/</guid>
-      <description>引言  这篇文章将介绍一些著名的不等式。
- 1. 均值不等式 这个著名的不等式极有可能是你在中学时代第一次接触的那一个。我们已经对它的二元形式很熟悉了： $$ \sqrt{ab}\leq\frac{a+b}{2} $$ 然而，均值不等式还有多元形式。 $$ \sqrt[n]{\prod_{i=1}^nx_i}\leq\frac{\sum_{i=1}^n}{n} $$ 例如， $$ \sqrt[5]{abcde}\leq\frac{a+b+c+d+e}{5} $$
-2. 琴生 (Jensen) 不等式 另一个著名的不等式。它的一个特例是 $$ \frac{f(x_1)+f(x_2)}{2}\leq f\left(\frac{x_1+x_2}{2}\right). $$ 你是否发现这个不等式很好地描述了上凸函数的性质？琴生不等式就是干这活的。 $$ \frac{\sum_{i=1}^nf(x_i)}{n}\leq f\left(\frac{\sum_{i=1}^nx_i}{n}\right) $$ 其中 $f(x)$ 是在区间上的上凸函数。当 $x_1=x_2=\cdots=x_i$ 时， $“=”$ 成立。
-2.1 加权琴生不等式 如同我们耳熟能详的加权平均数，加权琴生不等式可以这样表示： $$ w_i\cdot \sum_{i=1}^nf(x_i)\leq f\left(\sum_{i=1}^nw_ix_i\right),\sum_{i=1}^nw_i=1 $$ 容易发现，加权琴生不等式实际上就是在每一项之前乘上了权重 $w_i$。值得注意的是，这里并没有除以项数 $n$。
-3. 赫尔德 (Hölder) 不等式 赫尔德不等式被戏称为大柯西不等式。先来看看它究竟长啥样。 $$ \sum_{i=1}^na_ib_i\leq \left(\sum_{i=1}^na_i^p\right)^{\frac{1}{p}}\left(\sum_{i=1}^nb_i^q\right)^{\frac{1}{q}},p&amp;gt;1,\frac{1}{p}+\frac{1}{q}=1,\forall a_i,b_i\in\left(\R\cap[0,+\infty)\right) $$ 再来看看它的积分形式。 $$ \int_\Omega f(x)g(x)\mathrm{d}x\leq\left(\int_\Omega |f(x)|^p\mathrm{d}x\right)^{\frac{1}{p}}\left(\int_\Omega |g(x)|^q\mathrm{d}x\right)^{\frac{1}{q}} $$ 看起来不太友好，对吧？
-（未完待续）</description>
-    </item>
-    
-    <item>
-      <title>如何在 Jupyter 中使用 Wolfram Engine</title>
-      <link>https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</link>
-      <pubDate>Fri, 26 Feb 2021 20:44:31 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/cn_2021-02-26-wolfram-with-jekyll/</guid>
-      <description>预计阅读时间：10分钟   引言  我发现我已经十天没更新这玩意了……
- 此教程将介绍一种在 Jupyter 中使用 Wolfram Engine 的方法，以便获得更高的数据处理效率。
-安装 Wolfram Engine   你可以在这里免费下载 Wolfram Engine。实际上它也能在附带的 WolframScript 中运行，不过我们的目标是将它植入为 Jupyter 的一个内核。
-  找一个教程，它应该会让你下载一个.paclet文件来向 Wolfram Engine 添加支持 Jupyter 的特性。我无法提供这个文件，因为我忘了具体过程。你只要上网搜索 &amp;ldquo;Wolfram Engine + Jupyter&amp;rdquo; 就能看到许多完整教程。
-  打开 Jupyter Lab 或 Jupyter Notebook。你现在应该能选择 &amp;ldquo;Wolfram Language&amp;rdquo; 内核了。
-  联合 Wolfram 语言和 Python 举个例子。
-Python 部分：（如果你使用 Anaconda 安装 Jupyter，所使用的包应该会自动安装）
-In[]: import numpy as np import sympy as sp defsym = lambda sym: sp.</description>
-    </item>
-    
-    <item>
-      <title>Calcraft 的起源 (第一节)</title>
-      <link>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</link>
-      <pubDate>Mon, 15 Feb 2021 21:35:00 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/cn_2021-02-15-calcraft-tale-part-1/</guid>
-      <description>Calcraft 的起源 什么是 Calcraft？它是个合成词 （Calculator + Minecraft）。
-在 2019 年 2 月, Gary（MMXXXVIII）和 FlifeX 开始在 Minecraft 里造计算器。最开始他们并没把这东西的难度当回事，但这个困难的任务从未被完成过。出人意料，这最终成为了 Calcraft 的起源 —— Syndicate 有史以来最伟大的游戏服务器。
- FlifeX：我的傻逼文笔不适合写这东西，以后看这里吧。</description>
-    </item>
-    
-    <item>
-      <title>PowerPy 开发日志</title>
-      <link>https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/</link>
-      <pubDate>Mon, 15 Feb 2021 19:49:00 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/cn_2021-02-15-powerpy-development/</guid>
-      <description>引言 PowerPy 是一个用 Python 写的 Shell，致力于达到与bash，zsh等 Linux Shell 相似的功能。
-目前，PowerPy 有一个不完整的账户管理系统，它的提示符甚至还在用 eval 函数。
-典型函数 PowerPy 的开发过程中，我也遇到过许多恶心的问题。下面是一些典型的函数。
-  def loop(self, username): PROMPT_PREFIX = username + &amp;#39; $ &amp;#39; while True: issue_command = &amp;#39;os.system(\&amp;#39;%s\&amp;#39;)&amp;#39; % input(PROMPT_PREFIX) eval(issue_command) 是的，你也许会认为：“就这？”，然而对我来说并不那么容易，因为我不知道如何用 Python 正确执行 Shell 命令。最后，我还是不得不用 Python 的 eval() 函数。
-  </description>
-    </item>
-    
-    <item>
-      <title>如何在 Blender 2.9 中用 MantaFlow 模拟烟雾</title>
-      <link>https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</link>
-      <pubDate>Sun, 14 Feb 2021 12:34:56 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/cn_2021-02-14-blender-smoke-simulation/</guid>
-      <description>引言 示例最终效果
-你需要安装 Blender (在此教程中，我的版本是 2.91.0)，如果你曾经使用过 Blender 就更好了。
-烟雾   创建一个默认的立方体。
-  然后，对方块应用物体 - 快速效果 - 快速烟雾。
-  如果一切顺利，你会看见一个由线框组成的立方体 (Smoke Domain，烟雾域)，里面有另一个比较小的立方体。仔细观察，我们会发现另一个小正方体连在烟雾域的一个角上，其代表将要被烘培的烟雾的分辨率（我们之后解释）。
-  在烟雾域的物理属性选项卡里调整烟雾。这里，我提供一组推荐的参数：
-  细分精度：越高越好，这取决于你电脑的性能。
- 通常来说，300 到 500 就够了。    使用场景重力： Z 方向 = g.
-  启用自适配域（这可以减少烘培时间）。
-  启用消融，时间设置为 30，并且启用减慢。
-  启用噪波，把 Upres 系数 设置为 2，强度/力度 设置为 0.75，缩放 设置为 2，并且把时间设置为 0.1。
-  修改火焰：把反应速度设置为 0.75，涡量设置为1，最高温度设置为 4.5，最小值设置为 1.5。
-    现在，如果你做正确了，点击烘培， 然后慢慢等吧！不久，你的屏幕上就会出现一团十分真实的烟雾。（提示：你可以把 Blender 窗口分为三个区域 —— 一个用作渲染视图，一个用作着色器编辑器，另一个用作时间线，并且你总是可以用相机视角！）</description>
-    </item>
-    
-    <item>
-      <title>Tesseract 想法 (2021)</title>
-      <link>https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/</link>
-      <pubDate>Sun, 14 Feb 2021 01:48:00 +0000</pubDate>
-      
-      <guid>https://blog.calcraft.org/post/cn_2021-02-14-tesseract-ideas/</guid>
-      <description>Tesseract 长期计划 最近更新：2021/02/14
- 一个人不应止步于眼前的世界。
- Tesseract 是一个致力于拥有世界上最安全的聊天环境的聊天软件。
-目前，我拟定了如下目标：
-  完全的 P2P 多人对话；
-  加密系统；
-  GUI（由于技术原因，我们决定使用 Spectre.Console）；
-  账户系统；
-  以及许多未提到的功能！
-  因为这东西实在是太累人了，我真的需要帮忙。如果你有意帮助我们，你可以联系我们并加入我们的 Trello 主页，GitHub 仓库，和 Discord 服务器。</description>
+      <guid>/post/test/</guid>
+      <description>Why? This summer the motherboard of my MacBook Pro is damaged(?) and Genius Bar replaced a new one without treasuring my data. All articles were lost. :(
+I really doubt if it was damaged. It cannot be charged at first but resetting SMC controller and NVRAM would not take effect. Maybe some chips are burnt out?
+What to do? You see, I am writing this article in a new website to keep my blog functioning.</description>
+      <content>&lt;h3 id=&#34;why&#34;&gt;Why?&lt;/h3&gt;
+&lt;p&gt;This summer the motherboard of my MacBook Pro is damaged(?) and Genius Bar replaced a new one without treasuring my data. &lt;strong&gt;All articles were lost. :(&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I really doubt if it was damaged. It cannot be charged at first but resetting SMC controller and NVRAM would not take effect. Maybe some chips are burnt out?&lt;/p&gt;
+&lt;h3 id=&#34;what-to-do&#34;&gt;What to do?&lt;/h3&gt;
+&lt;p&gt;You see, I am writing this article in a new website to keep my blog functioning. However recovering all articles is very hard and seems to be impossible at the time.&lt;/p&gt;
+&lt;h3 id=&#34;so-what&#34;&gt;So what?&lt;/h3&gt;
+&lt;p&gt;So you cannot see previous articles from now on.
+$$
+\frac{1}{2}
+$$&lt;/p&gt;
+</content>
     </item>
     
   </channel>
